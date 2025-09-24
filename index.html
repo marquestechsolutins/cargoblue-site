@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>CargoBlue Logística</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <title>CargoBlue Logística</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
-            <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">CargoBlue</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
-                <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
-                </ul>
-            </div>
-            </div>
-        </nav>
-
-        <!-- Hero -->
-        <section class="bg-primary text-white text-center py-5 mt-5">
-            <div class="container">
-            <h1 class="display-4 fw-bold">Soluções Logísticas Inteligentes</h1>
-            <p class="lead">Conectamos sua empresa ao destino certo com agilidade, tecnologia e eficiência.</p>
-            <a href="quem-somos.html" class="btn btn-light btn-lg mt-3">Saiba Mais</a>
-            </div>
-        </section>
-
-        <!-- Serviços -->
-        <section class="container py-5">
-            <div class="text-center mb-5">
-            <h2 class="fw-bold">Nossos Serviços</h2>
-            <p class="text-muted">Soluções personalizadas para o seu negócio</p>
-            </div>
-            <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Transporte Rápido</h5>
-                    <p class="card-text">Agilidade e segurança no transporte de cargas em todo o Brasil.</p>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Monitoramento</h5>
-                    <p class="card-text">Acompanhe seus pedidos em tempo real com nossa plataforma digital.</p>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card shadow-sm h-100 text-center">
-                <div class="card-body">
-                    <h5 class="card-title">Atendimento 24/7</h5>
-                    <p class="card-text">Equipe pronta para atender sua empresa a qualquer hora do dia.</p>
-                </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- Calcule sua Rota -->
-        <section class="container py-5">
-        <div class="text-center mb-4">
-            <h2 class="fw-bold">Calcule sua Rota</h2>
-            <p class="text-muted">Descubra a distância e o tempo estimado entre dois pontos</p>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">CargoBlue</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-            <div class="card shadow-sm p-4">
-                <div class="row g-3">
-                <div class="col-md-5">
-                    <input id="origem" type="text" class="form-control" placeholder="Origem (ex: São Paulo)">
-                </div>
-                <div class="col-md-5">
-                    <input id="destino" type="text" class="form-control" placeholder="Destino (ex: Rio de Janeiro)">
-                </div>
-                <div class="col-md-2 d-grid">
-                    <button onclick="calcular()" class="btn btn-primary">Calcular</button>
-                </div>
-                </div>
-                <div class="mt-4 text-center">
-                <h5 id="resultado" class="text-secondary">Preencha os campos acima e clique em calcular</h5>
-                </div>
+    <!-- Hero -->
+    <section class="bg-primary text-white text-center py-5 mt-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Soluções Logísticas Inteligentes</h1>
+        <p class="lead">Conectamos sua empresa ao destino certo com agilidade, tecnologia e eficiência.</p>
+        <a href="quem-somos.html" class="btn btn-light btn-lg mt-3">Saiba Mais</a>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Nossos Serviços</h2>
+        <p class="text-muted">Soluções personalizadas para o seu negócio</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Transporte Rápido</h5>
+              <p class="card-text">Agilidade e segurança no transporte de cargas em todo o Brasil.</p>
             </div>
-            </div>
+          </div>
         </div>
-        </section>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Monitoramento</h5>
+              <p class="card-text">Acompanhe seus pedidos em tempo real com nossa plataforma digital.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">Atendimento 24/7</h5>
+              <p class="card-text">Equipe pronta para atender sua empresa a qualquer hora do dia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="bg-dark text-white text-center py-4 mt-5">
-            <p class="mb-0">&copy; 2025 CargoBlue Logística - Todos os direitos reservados.</p>
-        </footer>
+    <!-- Calcule sua Rota -->
+    <section class="container py-5">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Calcule sua Rota</h2>
+        <p class="text-muted">Descubra a distância e o tempo estimado entre dois pontos</p>
+      </div>
 
-        <!-- Scripts -->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOvaf_Tb-AV1OfZCB-pwMFZ-giTy3xRv4&libraries=places&callback=initMap"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card shadow-sm p-4">
+            <div class="row g-3">
+              <div class="col-md-5">
+                <input id="origem" type="text" class="form-control" placeholder="Origem (ex: São Paulo)">
+              </div>
+              <div class="col-md-5">
+                <input id="destino" type="text" class="form-control" placeholder="Destino (ex: Rio de Janeiro)">
+              </div>
+              <div class="col-md-2 d-grid">
+                <button id="btnCalcular" class="btn btn-primary">Calcular</button>
+              </div>
+            </div>
+            <div class="mt-4 text-center">
+              <h5 id="resultado" class="text-secondary">Preencha os campos acima e clique em calcular</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <p class="mb-0">&copy; 2025 CargoBlue Logística - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOvaf_Tb-AV1OfZCB-pwMFZ-giTy3xRv4&libraries=places&callback=initMap"></script>
+  </body>
 </html>
-
-

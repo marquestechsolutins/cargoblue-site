@@ -69,3 +69,9 @@ async function calcular() {
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btnCalcular").addEventListener("click", calcular);
 });
+
+function initMap() {
+  console.log("Google Maps API carregada!");
+}
+
+

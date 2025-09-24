@@ -34,7 +34,12 @@ function calcular() {
   );
 }
 
+// callback do Google Maps
 function initMap() {
   console.log("Google Maps API carregada!");
 }
 
+// adiciona evento ao botão
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("btnCalcular").addEventListener("click", calcular);
+});

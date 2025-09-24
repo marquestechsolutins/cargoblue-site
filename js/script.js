@@ -33,3 +33,7 @@ function calcular() {
     }
   );
 }
+
+function initMap() {
+  console.log("Google Maps API carregada!");
+}

@@ -1,21 +1,15 @@
-
-/*
-Poppins (moderna e limpa)
-
-Orbitron (tech futurista)
-
-Rajdhani (tech elegante)
-
-Exo 2 (ótima para temas tecnológicos) 
- */
-
+/* =========================================================
+   FONTES PRINCIPAIS
+   ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap');
 
 body {
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* RESET */
+/* =========================================================
+   RESET & CONFIGURAÇÕES GERAIS
+   ========================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -32,29 +26,6 @@ body {
   color: #fff;
 }
 
-/* ===== NAVBAR ===== */
-/* .navbar {
-  transition: all 0.3s ease;
-}
-.navbar.scrolled {
-  background-color: rgba(0, 30, 80, 0.85);
-  backdrop-filter: blur(10px);
-} */
-
-/* ===== NAVBAR PERSONALIZADA ===== */
-.custom-navbar {
-  border-radius: 10px; /* arredondamento bonito */
-  margin: 20px auto;
-  width: 90%; /* pra deixar ela flutuando com bordas */
-  background: linear-gradient(145deg, #136E94);
-}
-
-.navbar-brand {
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
 h1, h2, h3 {
   font-family: 'Exo 2', sans-serif;
   font-weight: 700;
@@ -65,14 +36,23 @@ p {
   font-weight: 400;
 }
 
-/* ao rolar a página (opcional: pode usar JS pra ativar) */
-/* .navbar.scrolled {
-  background: rgba(0, 30, 100, 0.95);
-  border-color: rgba(0, 150, 255, 0.9);
-  box-shadow: 0 4px 30px rgba(0, 150, 255, 0.4);
-} */
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.custom-navbar {
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  background: linear-gradient(145deg, #136E94);
+}
 
-/* links da navbar */
+.navbar-brand {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Links */
 .custom-navbar .nav-link {
   color: #ffffff !important;
   margin: 0 10px;
@@ -81,18 +61,7 @@ p {
   transition: color 0.3s;
 }
 
-.nav-brand {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #00bfff;
-  transition: width 0.3s;
-}
-
-/* animação de hover (linha azul neon) */
+/* Efeito hover (linha azul neon) */
 .custom-navbar .nav-link::after {
   content: "";
   position: absolute;
@@ -112,10 +81,43 @@ p {
   color: #00bfff !important;
 }
 
-/* ===== HERO ===== */
+/* =========================================================
+   BOTÃO WHATSAPP FLUTUANTE
+   ========================================================= */
+.btn-whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #136E94, #2eb8d7);
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 15px 17px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
 
-/* ===== HERO COM IMAGEM E FUNDO AZUL ANIMADO ===== */
+.btn-whatsapp:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 20px rgba(46,184,215,0.7);
+  color: #fff;
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero h1 {
+  color: #0a2c40;
+}
+
+.hero p {
+  color: #0a2c40;
+}
+
 .hero {
+  padding-top: 140px;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -126,72 +128,65 @@ p {
   text-align: center;
 }
 
-/* camada da imagem */
+/* Fundo com imagem */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../IMG/bg/45.png'); /* <-- imagem aqui */
+  background-image: url('../IMG/bg/45.png');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.8); /* escurece um pouco a imagem pra o azul se destacar */
+  /* filter: brightness(0.8); */
   z-index: 0;
 }
 
+/* Fundo animado azul */
 .hero-servicos-bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(-45deg, #0a2c40, #136e94, #208cb8, #2eb8d7);
   background-size: cover;
   background-position: center;
-  /* filter: brightness(0.8); escurece um pouco a imagem pra o azul se destacar */
   z-index: 0;
 }
 
-/* camada de texto */
+/* Conteúdo */
 .hero-content {
   position: relative;
   z-index: 2;
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
+
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* .hero {
-  position: relative;
-  height: 100vh;
-  color: white;
-  background: linear-gradient(120deg, #0044cc, #007bff, #33ccff);
-  background-size: 300% 300%;
-  animation: gradientShift 10s ease infinite;
-  overflow: hidden;
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-} 
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 50, 0.3);
-  backdrop-filter: blur(px);
-}*/
-
-/* ===== SERVIÇOS ===== */
+/* =========================================================
+   SEÇÃO DE SERVIÇOS
+   ========================================================= */
 .servicos {
   background: #f8f9fb;
   color: #000;
 }
 
+.servicos h2 {
+  color: #136e94;
+}
+
+.servicos h4 {
+  color: #ffffff;
+}
+
+.servicos p {
+  color: #ffffff;
+}
+
+/* Cards */
 .service-card {
   border-radius: 10px;
   transition: all 0.3s ease;
-  background: linear-gradient(145deg, #2eb8d7, #136E94);
-  /* background: linear-gradient(145deg, #2eb8d7, #4dffff); */
+  background: linear-gradient(145deg, #136e94, #0a2c40);
 }
 
 .service-card:hover {
@@ -199,6 +194,7 @@ p {
   box-shadow: 0 10px 20px #136E94;
 }
 
+/* Botão */
 .servicos .btn-primary {
   background: linear-gradient(90deg, #136e94, #0a2c40);
   border: none;
@@ -210,10 +206,76 @@ p {
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
 }
 
+/* Fundo diagonal */
+.servicos-bg {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 55%;
+  height: 82%;
+  background: #e5e5e5;
+  border-radius: 50px;
+  transform: skewY(0deg);
+  z-index: 0;
+}
 
-/* ===== SOBRE ===== */
+/* =========================================================
+   SEÇÃO DE CERTIFICADOS
+   ========================================================= */
+.certificado {
+  background: #f8f9fb;
+  color: #000;
+}
+
+.certificado h2 {
+  color: #136e94;
+}
+
+.certificado p {
+  color: #ffffff;
+}
+
+/* Cards */
+.certificado-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #136e94, #0a2c40);
+}
+
+.certificado-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px #136E94;
+}
+
+/* Botão */
+.certificado .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.certificado .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+}
+
+.certificado-bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 18%;
+  background: #e5e5e5;
+  transform: skewY(0deg);
+  z-index: 0;
+}
+
+
+/* =========================================================
+   SEÇÃO SOBRE
+   ========================================================= */
 .sobre {
-  background: linear-gradient(135deg, #2eb8d7, #136E94);
+  background: linear-gradient(135deg, #208cb8, #0a2c40);
   color: white;
 }
 
@@ -228,76 +290,8 @@ p {
   box-shadow: 0 10px 20px #136E94;
 }
 
-
-/* ===== FOOTER ===== */
-/* footer {
-  background: #136E94;
-  color: #000000;
-  font-size: 0.9rem;
-} */
-
-.footer {
-background: linear-gradient(135deg, #0a2a45, #136E94);
-color: #f1f1f1;
-position: relative;
-z-index: 10;
-}
-
-.footer-link {
-  color: #cce7f8;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-  color: #2eb8d7;
-  text-decoration: underline;
-}
-
-.footer img {
-  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
-}
-
-/* .footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(46,184,215,0.15) 0%, transparent 70%);
-  animation: lightPulse 10s infinite linear;
-}
-
-@keyframes lightPulse {
-  0% { transform: translateX(-30%) rotate(0deg); }
-  100% { transform: translateX(30%) rotate(360deg); }
-} */
-
-/* ===== HERO MENOR (QUEM SOMOS) ===== */
-  .hero-small {
-    height: 60vh;
-    background: linear-gradient(120deg, #0044cc, #007bff, #33ccff);
-    background-size: 300% 300%;
-    animation: gradientShift 10s ease infinite;
-    position: relative;
-  }
-
-  .hero-small .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 80, 0.2);
-  }
-
-
-
-/* ===== SOBRE EMPRESA ===== */
-.sobre-empresa {
-  color: #000;
-}
-
 .sobre .btn-primary {
-  background: linear-gradient(90deg, #136e94, #0a2c40);
+  background: linear-gradient(90deg, #0a2c40, #136e94);
   border: none;
   transition: all 0.3s ease;
 }
@@ -307,15 +301,25 @@ z-index: 10;
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
 }
 
+/* =========================================================
+   SOBRE A EMPRESA
+   ========================================================= */
+.sobre-empresa {
+  color: #000;
+}
+
 .sobre-empresa img {
   border-radius: 15px;
   transition: transform 0.4s ease;
 }
+
 .sobre-empresa img:hover {
   transform: scale(1.03);
 }
 
-/* ===== VALORES ===== */
+/* =========================================================
+   SEÇÃO VALORES
+   ========================================================= */
 .valores {
   background: linear-gradient(135deg, #0055cc, #002b66);
   color: white;
@@ -327,15 +331,21 @@ z-index: 10;
   backdrop-filter: blur(3px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .valor-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
 }
 
-/* ===== CLIENTES ===== */
-
+/* =========================================================
+   SEÇÃO CLIENTES
+   ========================================================= */
 .clientes-empresa {
   color: #000;
+}
+
+.clientes h2 {
+  color: #136e94;
 }
 
 .clientes .btn-primary {
@@ -353,6 +363,7 @@ z-index: 10;
   border-radius: 15px;
   transition: transform 0.4s ease;
 }
+
 .clientes-empresa img:hover {
   transform: scale(1.03);
 }
@@ -369,31 +380,14 @@ z-index: 10;
   z-index: 0;
 }
 
-/* Garante que o conteúdo fique acima do fundo */
 .clientes .container {
   position: relative;
   z-index: 1;
 }
 
-/* ===== VALORES ===== */
-.valores {
-  background: linear-gradient(135deg, #0055cc, #002b66);
-  color: white;
-}
-
-.valor-card {
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.valor-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
-}
-
-
-/* ===== TRABALHE CONOSCO ===== */
+/* =========================================================
+   TRABALHE CONOSCO
+   ========================================================= */
 .trabalhe {
   background: #f8f9fb;
   color: #000;
@@ -433,4 +427,46 @@ z-index: 10;
 .formulario .btn-primary:hover {
   background: linear-gradient(90deg, #2eb8d7, #136E94);
   box-shadow: 0 5px 15px #136E94;
+}
+
+/* =========================================================
+   HERO MENOR (PÁGINAS INTERNAS)
+   ========================================================= */
+.hero-small {
+  height: 60vh;
+  background: linear-gradient(120deg, #0044cc, #007bff, #33ccff);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  position: relative;
+}
+
+.hero-small .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 80, 0.2);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  background: linear-gradient(135deg, #0a2a45, #136E94);
+  color: #f1f1f1;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-link {
+  color: #cce7f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #2eb8d7;
+  text-decoration: underline;
+}
+
+.footer img {
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
 }

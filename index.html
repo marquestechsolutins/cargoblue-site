@@ -2,87 +2,181 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Logística Gabriel LDTA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <style>
-    #map { height: 400px; width: 100%; margin-top: 20px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CargoBlue - Logística Inteligente</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">Logística Gabriel LTDA</a>
+      <a class="navbar-brand fw-bold" href="#">CARGOBLUE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
           <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand nav-link fw-bold" href="index.html" >CARGOBLUE
+        <!-- <img src="IMG/logos/logo-cb.png" alt="Cargoblue" height="200"> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Contato</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="bg-primary text-white text-center py-5 mt-5">
+  <!-- HERO -->
+  <section class="hero d-flex align-items-center justify-content-center text-center" id="home">
+    <div class="hero-bg"></div>
+    <!-- <div class="hero-overlay"></div> -->
     <div class="container">
-      <h1 class="display-4 fw-bold">Soluções Logísticas Inteligentes</h1>
-      <p class="lead">Conectamos sua empresa ao destino certo com agilidade, tecnologia e eficiência.</p>
-      <a href="quem-somos.html" class="btn btn-light btn-lg mt-3">Saiba Mais</a>
+      <p class="lead" data-aos="fade-up" data-aos-delay="300">
+        CargoBlue Transportes
+      </p>
+      <h1 data-aos="fade-up" data-aos-delay="100">Conectando o Brasil de ponta a ponta</h1>
+      <!-- <a href="#servicos" class="btn btn-primary btn-lg mt-3" data-aos="zoom-in" data-aos-delay="500">
+        Nossos Serviços
+      </a> -->
     </div>
   </section>
 
-  <!-- Calcule sua Rota -->
-  <section class="container py-5">
-    <div class="text-center mb-4">
-      <h2 class="fw-bold">Calcule sua Rota</h2>
-      <p class="text-muted">Distância, tempo estimado e mapa da rota</p>
+  <!-- SERVIÇOS -->
+  <section class="hero servicos py-5 position-relative" id="servicos">
+
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        
+        <!-- COLUNA ESQUERDA - TEXTOS E CARDS -->
+        <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
+          <h2 class="section-title mb-5">Nossas soluções sob medida</h2>
+          <div class="row g-4">
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>Sistema Milk-Run</h4>
+                <p>Operações em que um único veículo realiza coletas programadas em pontos especifícos</p>
+              </div>
+            </div>        
+            <div class="col-md-6" data-aos="zoom-in">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>Gestão de Operações In House</h4>
+                <p>Equipe especializada gerenciando todos os processos desde recebimento até a expedição</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>Hot Line-Expresso</h4>
+                <p>Transporte exclusivo e urgente com veículo dedicado</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>First Mile</h4>
+                <p>Etapa inicial do transporte com coleta de mercadorias nos fabricantes</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>Middle Mile</h4>
+                <p>Fase intermediária da logística,com transferências dos Centros de Distribuição para os Centros de Apoio</p>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="zoom-in">
+              <div class="card service-card p-4 shadow-sm h-100">
+                <h4>Line Haul</h4>
+                <p>Transporte de carga lotação entre pontos A e B</p>
+              </div>
+            </div>
+            <a href="servicos.html" class="btn ">Saiba mais</a>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA - IMAGEM -->
+        <div class="col-lg-5 text-center" data-aos="fade-left">
+          <div class="image-grid">
+            <img src="IMG/bg/IMG_8960.jpg" alt="caminhoes_cb" class="img-fluid rounded-4 shadow-lg service-img">
+          </div>
+          <div class="image-grid">
+            <img src="IMG/bg/IMG_8935.jpg" alt="reuniao_cb" class="img-fluid rounded-4 shadow-lg tall">
+          </div>
+        </div>
+        
+      </div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow-sm p-4">
-          <div class="row g-3">
-            <div class="col-md-5">
-              <input id="origem" type="text" class="form-control" placeholder="Origem (ex: São Paulo)">
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre py-5 text-center">
+    <div class="container position-relative" data-aos="fade-up">
+      <div class="row align-items-center">
+        <!-- COLUNA ESQUERDA - TEXTOS E CARDS -->
+        <div class="col-lg-7 text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
+          <h2 class="section-title mb-5">Quem Somos</h2>
+          <div class="row g-4">
+            <div class="col-md-12" data-aos="fade-right">
+              <div class="card .service-card-sobre p-4 shadow-sm h-100">
+                <h4>Somos uma empresa apaixonada pelo que faz e isso move tudo o que entregamos.</h4>
+                <p>A Cargoblue nasceu com um propósito claro: oferecer soluçõesde logística e transporte personalizadas, inteligentes e de altaqualidade.</p>
+              </div>
             </div>
-            <div class="col-md-5">
-              <input id="destino" type="text" class="form-control" placeholder="Destino (ex: Rio de Janeiro)">
-            </div>
-            <div class="col-md-2 d-grid">
-              <button id="btnCalcular" class="btn btn-primary">Calcular</button>
-            </div>
+            <a href="quem-somos.html" class="btn btn-outline-light">Saiba mais</a>
           </div>
-          <div class="mt-4 text-center">
-            <h5 id="resultado" class="text-secondary">Preencha os campos acima e clique em calcular</h5>
-          </div>
-          <div id="map"></div>
         </div>
+
+        <!-- COLUNA DIREITA - IMAGEM -->
+        <div class="col-lg-5 text-center" data-aos="fade-left">
+          <div class="image-grid">
+            <img src="IMG/bg/IMG_8960.jpg" alt="caminhoes_cb" class="img-fluid rounded-4 shadow-lg service-img">
+          </div>
+          <div class="image-grid">
+            <img src="IMG/bg/IMG_8935.jpg" alt="reuniao_cb" class="img-fluid rounded-4 shadow-lg tall">
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4 mt-5">
-    <p class="mb-0">&copy; 2025 CargoBlue Logística - Todos os direitos reservados.</p>
+  <section class="sobre py-5 text-center">
+    <div class="container" data-aos="fade-up">
+      <h2>Alguns de nossos clientes</h2>
+      <p class="lead mt-3 mb-4">
+        IMG dos clientes aqui
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4">
+    <p>&copy; 2025 CargoBlue. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>
-
-
-

@@ -1,13 +1,313 @@
+
+/*
+Poppins (moderna e limpa)
+
+Orbitron (tech futurista)
+
+Rajdhani (tech elegante)
+
+Exo 2 (ótima para temas tecnológicos) 
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Rajdhani', sans-serif;
 }
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+/* .navbar {
+  transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(0, 30, 80, 0.85);
+  backdrop-filter: blur(10px);
+} */
+
+/* ===== NAVBAR PERSONALIZADA ===== */
+.custom-navbar {
+  border-radius: 10px; /* arredondamento bonito */
+  margin: 20px auto;
+  width: 90%; /* pra deixar ela flutuando com bordas */
+  background: linear-gradient(145deg, #136E94);
+}
+
 .navbar-brand {
-  font-size: 1.5rem;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-.card {
-  border: none;
-  transition: transform 0.2s;
+
+h1, h2, h3 {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
 }
-.card:hover {
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+/* ao rolar a página (opcional: pode usar JS pra ativar) */
+/* .navbar.scrolled {
+  background: rgba(0, 30, 100, 0.95);
+  border-color: rgba(0, 150, 255, 0.9);
+  box-shadow: 0 4px 30px rgba(0, 150, 255, 0.4);
+} */
+
+/* links da navbar */
+.custom-navbar .nav-link {
+  color: #ffffff !important;
+  margin: 0 10px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-brand {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s;
+}
+
+/* animação de hover (linha azul neon) */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00bfff;
+  transition: width 0.3s;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #00bfff !important;
+}
+
+/* ===== HERO ===== */
+
+/* ===== HERO COM IMAGEM E FUNDO AZUL ANIMADO ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* camada da imagem */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../IMG/bg/45.png'); /* <-- imagem aqui */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.8); /* escurece um pouco a imagem pra o azul se destacar */
+  z-index: 0;
+}
+
+.hero-servicos-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #0a2c40, #136e94, #208cb8, #2eb8d7);
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(0.8); escurece um pouco a imagem pra o azul se destacar */
+  z-index: 0;
+}
+
+/* camada de texto */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* .hero {
+  position: relative;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(120deg, #0044cc, #007bff, #33ccff);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} 
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 50, 0.3);
+  backdrop-filter: blur(px);
+}*/
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+  background: #f8f9fb;
+  color: #000;
+}
+
+.service-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #2eb8d7, #136E94);
+  /* background: linear-gradient(145deg, #2eb8d7, #4dffff); */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px #136E94;
+}
+
+/* ===== SOBRE ===== */
+.sobre {
+  background: linear-gradient(135deg, #2eb8d7, #136E94);
+  color: white;
+}
+
+.service-card-sobre {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #2eb8d7, #136E94);
+}
+
+.service-card-sobre:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px #136E94;
+}
+
+
+/* ===== FOOTER ===== */
+  footer {
+    background: #136E94;
+    color: #000000;
+    font-size: 0.9rem;
+  }
+
+/* ===== HERO MENOR (QUEM SOMOS) ===== */
+  .hero-small {
+    height: 60vh;
+    background: linear-gradient(120deg, #0044cc, #007bff, #33ccff);
+    background-size: 300% 300%;
+    animation: gradientShift 10s ease infinite;
+    position: relative;
+  }
+
+  .hero-small .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 80, 0.2);
+  }
+
+/* ===== SOBRE EMPRESA ===== */
+.sobre-empresa {
+  color: #000;
+}
+
+.sobre-empresa img {
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+.sobre-empresa img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== VALORES ===== */
+.valores {
+  background: linear-gradient(135deg, #0055cc, #002b66);
+  color: white;
+}
+
+.valor-card {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.valor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
+}
+
+/* ===== TRABALHE CONOSCO ===== */
+.trabalhe {
+  background: #f8f9fb;
+  color: #000;
+}
+
+.formulario {
+  background: linear-gradient(145deg, #2eb8d7, #136E94);
+  border: 1px solid #dbe9ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 100, 255, 0.25);
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  border-radius: 10px;
+  border: 1px solid #cce0ff;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  border-color: #2eb8d7;
+  box-shadow: 0 0 5px #136E94;
+}
+
+.formulario .btn-primary {
+  background: linear-gradient(90deg, #2eb8d7, #136E94);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.formulario .btn-primary:hover {
+  background: linear-gradient(90deg, #2eb8d7, #136E94);
+  box-shadow: 0 5px 15px #136E94;
 }

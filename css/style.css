@@ -153,7 +153,6 @@ p {
   z-index: 2;
   text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
-
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -200,6 +199,18 @@ p {
   box-shadow: 0 10px 20px #136E94;
 }
 
+.servicos .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.servicos .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+}
+
+
 /* ===== SOBRE ===== */
 .sobre {
   background: linear-gradient(135deg, #2eb8d7, #136E94);
@@ -219,11 +230,49 @@ p {
 
 
 /* ===== FOOTER ===== */
-  footer {
-    background: #136E94;
-    color: #000000;
-    font-size: 0.9rem;
-  }
+/* footer {
+  background: #136E94;
+  color: #000000;
+  font-size: 0.9rem;
+} */
+
+.footer {
+background: linear-gradient(135deg, #0a2a45, #136E94);
+color: #f1f1f1;
+position: relative;
+z-index: 10;
+}
+
+.footer-link {
+  color: #cce7f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #2eb8d7;
+  text-decoration: underline;
+}
+
+.footer img {
+  filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+
+/* .footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(46,184,215,0.15) 0%, transparent 70%);
+  animation: lightPulse 10s infinite linear;
+}
+
+@keyframes lightPulse {
+  0% { transform: translateX(-30%) rotate(0deg); }
+  100% { transform: translateX(30%) rotate(360deg); }
+} */
 
 /* ===== HERO MENOR (QUEM SOMOS) ===== */
   .hero-small {
@@ -240,9 +289,22 @@ p {
     background: rgba(0, 0, 80, 0.2);
   }
 
+
+
 /* ===== SOBRE EMPRESA ===== */
 .sobre-empresa {
   color: #000;
+}
+
+.sobre .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.sobre .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
 }
 
 .sobre-empresa img {
@@ -269,6 +331,67 @@ p {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
 }
+
+/* ===== CLIENTES ===== */
+
+.clientes-empresa {
+  color: #000;
+}
+
+.clientes .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.clientes .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+}
+
+.clientes-empresa img {
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+.clientes-empresa img:hover {
+  transform: scale(1.03);
+}
+
+/* Fundo diagonal cinza */
+.clientes-bg {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background: #e5e5e5;
+  transform: skewY(-5deg);
+  z-index: 0;
+}
+
+/* Garante que o conteúdo fique acima do fundo */
+.clientes .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== VALORES ===== */
+.valores {
+  background: linear-gradient(135deg, #0055cc, #002b66);
+  color: white;
+}
+
+.valor-card {
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.valor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
+}
+
 
 /* ===== TRABALHE CONOSCO ===== */
 .trabalhe {

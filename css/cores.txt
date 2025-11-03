@@ -1,0 +1,10 @@
+#0a2c40
+#136e94
+#208cb8
+#2eb8d7
+#4dffff
+
+
+git add .
+git commit
+git push -u origin main

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabalhe Conosco - CargoBlue</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV BAR -->
+  <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand nav-link fw-bold" href="index.html" >CARGOBLUE
+        <!-- <img src="img/logos/logo-cb.png" alt="Cargoblue" height="200"> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero hero-small d-flex align-items-center text-center">
+    <div class="container">
+      <h1 data-aos="fade-down">Trabalhe Conosco</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="200">
+        Faça parte de uma equipe que move o futuro da logística.
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="trabalhe py-5">
+    <div class="container text-center">
+      <h2 class="text-primary fw-bold mb-4" data-aos="fade-up">Faça parte da CargoBlue</h2>
+      <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
+        Estamos sempre em busca de talentos que compartilham nosso propósito de inovação, eficiência e compromisso.
+        Envie seu currículo e venha crescer conosco!
+      </p>
+
+      <!-- FORMULÁRIO -->
+      <div class="row justify-content-center" data-aos="zoom-in">
+        <div class="col-lg-6">
+          <form class="formulario shadow p-4 rounded" action="#" method="POST">
+            <div class="mb-3 text-start">
+              <label for="nome" class="form-label">Nome completo</label>
+              <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="area" class="form-label">Área de interesse</label>
+              <select id="area" name="area" class="form-select" required>
+                <option value="">Selecione</option>
+                <option>Motorista</option>
+                <option>Logística</option>
+                <option>Administração</option>
+                <option>Financeiro</option>
+                <option>Outros</option>
+              </select>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="curriculo" class="form-label">Currículo (PDF ou DOCX)</label>
+              <input type="file" id="curriculo" name="curriculo" class="form-control" accept=".pdf,.doc,.docx" required>
+            </div>
+
+            <div class="mb-3 text-start">
+              <label for="mensagem" class="form-label">Mensagem (opcional)</label>
+              <textarea id="mensagem" name="mensagem" rows="4" class="form-control" placeholder="Fale um pouco sobre você..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 mt-3">Enviar Currículo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer text-light pt-5 pb-3">
+    <div class="container">
+      <div class="row gy-4">
+        
+        <!-- COLUNA 1 - LOGO / DESCRIÇÃO -->
+        <div class="col-md-4 text-center text-md-start">
+          <img src="img/logos/logo-cb.png" alt="CargoBlue" class="mb-3" style="max-width: 180px;">
+          <p class="small">
+            Conectando o Brasil de ponta a ponta com soluções logísticas inteligentes, seguras e ágeis.
+          </p>
+        </div>
+
+        <!-- COLUNA 2 - LINKS -->
+        <div class="col-md-4 text-center">
+          <h5 class="mb-3 text-uppercase">Links Úteis</h5>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="quem-somos.html" class="footer-link">Quem Somos</a></li>
+            <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+            <li><a href="trabalhe-conosco.html" class="footer-link">Trabalhe Conosco</a></li>
+          </ul>
+        </div>
+
+        <!-- COLUNA 3 - CONTATO -->
+        <div class="col-md-4 text-center text-md-end">
+          <h5 class="mb-3 text-uppercase">Contato</h5>
+          <p class="small mb-1">📍 Rua Ipê, 365 - Barueri, SP</p>
+          <p class="small mb-1">📞 (11) 99999-9999</p>
+          <p class="small">📧 contato@cargoblue.com.br</p>
+        </div>
+
+      </div>
+
+      <hr class="my-4 opacity-25">
+
+      <div class="text-center small">
+        <p class="mb-0">&copy; 2025 <strong>CargoBlue Logística e Transportes</strong>. Todos os direitos reservados.</p>
+        <p class="mt-1 text-secondary">Desenvolvido por TechMarques</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5511999999999" 
+    class="btn-whatsapp" 
+    target="_blank" 
+    title="Fale conosco no WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,8 +15,8 @@
   <!-- NAV BAR -->
   <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container">
-      <a class="navbar-brand nav-link fw-bold" href="index.html" >CARGOBLUE
-        <!-- <img src="img/logos/logo-cb.png" alt="Cargoblue" height="200"> -->
+      <a class="navbar-brand nav-link fw-bold" href="index.html" >
+        <img src="img/logos/CargobluePNGBranca.png" alt="Cargoblue" height="40">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -32,21 +33,50 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero d-flex align-items-start text-center" id="home">
-    <div class="hero-bg"></div>
-    <div class="container">
-      <p class="lead" data-aos="fade-up" data-aos-delay="300">
-        CargoBlue Transportes
-      </p>
-      <h1 data-aos="fade-up" data-aos-delay="100">Conectando o Brasil de ponta a ponta</h1>
+  <!-- HERO SPLIT -->
+  <section class="hero-split" id="home">
+
+    <!-- ESQUERDA — SLIDER -->
+    <div class="hero-left swiper hero-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide hero-slide" style="background-image: url('img/bg/caminhao_cargobluegrande.jpg');"></div>
+
+        <div class="swiper-slide hero-slide" style="background-image: url('img/bg/caminhao_amarelo_laranja.jpg');"></div>
+
+        <div class="swiper-slide hero-slide" style="background-image: url('img/bg/caminhao_10.jpg');"></div>
+
+        <div class="swiper-slide hero-slide" style="background-image: url('img/bg/caminhao_azulvermelho.jpg');"></div>
+
+      </div>
     </div>
+    <div class="hero-divider"></div>
+    <!-- DIREITA — IMAGEM FIXA + TEXTO -->
+    <div class="hero-right">
+
+      <!-- Fundo com blur -->
+      <div class="hero-right-bg"></div>
+
+      <div class="hero-content">
+        <h1>CARGOBLUE Transportes</h1>
+        <div class="brand-line"></div>
+        <p>Conectando o Brasil com eficiência e confiança.</p>
+      </div>
+
+    </div>
+
   </section>
 
   <!-- SERVIÇOS -->
-  <section class="hero servicos py-5 position-relative" id="servicos">
+  <section class="servicos py-5 position-relative" id="servicos">
+    <div class="servicos-faixa"></div>
     <div class="container position-relative">
       <div class="row align-items-center g-5">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-12">
+            <br>
+          </div>
+        </div>
         
         <!-- COLUNA ESQUERDA - TEXTOS E CARDS -->
         <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right">
@@ -97,8 +127,8 @@
         <!-- COLUNA DIREITA - IMAGENS -->
         <div class="col-lg-5 text-center" data-aos="fade-left">
           <div class="d-flex flex-column gap-4">
-            <img src="img/bg/img_8960.jpg" alt="Caminhões Cargoblue" class="img-fluid rounded-4 shadow-lg service-img">
-            <img src="img/bg/img_2881.jpeg" alt="Loggi e cargoblue" class="img-fluid rounded-4 shadow-lg tall">
+            <img src="img/bg/caminhao05.png" alt="Caminhões Cargoblue" class="img-fluid rounded-4 shadow-lg service-img">
+            <img src="img/bg/caminhao_azulvermelho.jpg" alt="Loggi e cargoblue" class="img-fluid rounded-4 shadow-lg tall">
           </div>
         </div>
 
@@ -118,7 +148,7 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="certificado-card p-4 h-100 rounded-4 shadow-lg bg-primary text-white">
-            <img src="img/logos/selo-Ecovadis.jpg" alt="selo ecovadis" class="mb-3" width="60">
+            <img src="img/logos/ecovadis_selopng.png" alt="selo ecovadis" class="mb-3" width="150">
             <h3 class="fw-bold">EcoVadis</h3>
             <p class="mt-3 mb-0 small">
               A EcoVadis realiza a avaliação
@@ -130,7 +160,7 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="certificado-card p-4 h-100 rounded-4 shadow-lg bg-primary text-white">
-            <img src="img/logos/selo-Exame.jpg" alt="selo exame" class="mb-3" width="60">
+            <img src="img/logos/selo_examepng.png" alt="selo exame" class="mb-3" width="150">
             <h3 class="fw-bold">Exame</h3>
             <p class="mt-3 mb-0 small">
               Falta descrição.
@@ -139,7 +169,7 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="certificado-card p-4 h-100 rounded-4 shadow-lg bg-primary text-white">
-            <img src="img/logos/anvisa.png" alt="selo anvisa" class="mb-3" width="60">
+            <img src="img/logos/anvisa_selopng.png" alt="selo anvisa" class="mb-3" width="200">
             <h3 class="fw-bold">Anvisa</h3>
             <p class="mt-3 mb-0 small">
               A CargoBlue é certificada para o transporte de produtos para a saúde,atendendo rigorosamente às exigências da Anvisa.
@@ -177,7 +207,7 @@
           <img src="img/bg/adm_reunido.jpg" alt="Equipe Administrativa" class="img-fluid rounded-4 shadow-lg w-100 h-150">
         </div>
         <div class="col-md-4" data-aos="fade-up">
-          <img src="img/bg/img_8935.jpg" alt="Equipe reuniao" class="img-fluid rounded-4 shadow-lg w-100 h-100">
+          <img src="img/bg/todos_reunidos02.jpg" alt="Equipe reuniao" class="img-fluid rounded-4 shadow-lg w-100 h-100">
         </div>
       </div>
     </div>
@@ -199,34 +229,34 @@
       <!-- GRID DE LOGOS -->
       <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center align-items-center">
         <div class="col">
-          <img src="img/clientes/shopee.png" alt="Shopee" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/shopee.png" alt="Shopee" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/jt_express.png" alt="J&T Express" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/jt_express.png" alt="J&T Express" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/decathlon.png" alt="Decathlon" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/decathlon.png" alt="Decathlon" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/loggi.png" alt="Loggi" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/loggi.png" alt="Loggi" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/magalog.png" alt="Magalog" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/anjun.png" alt="anjun" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/mars.png" alt="Mars Petcare" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/mars_petcare.png" alt="Mars Petcare" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/ajium.png" alt="Ajium" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/plural_grafica.png" alt="plural_grafica" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/ipsys.png" alt="Ipsys" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/mercado livre.png" alt="mercado livre" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/fmlog.png" alt="FM Logistic" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/amazon.png" alt="amazon" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
         <div class="col">
-          <img src="img/clientes/total_express.png" alt="Total Express" class="img-fluid p-3 bg-white shadow-sm rounded-3">
+          <img src="img/logos/total_express.png" alt="Total Express" class="img-fluid p-3 bg-white shadow-sm rounded-3">
         </div>
       </div>
     </div>
@@ -239,7 +269,7 @@
         
         <!-- COLUNA 1 - LOGO / DESCRIÇÃO -->
         <div class="col-md-4 text-center text-md-start">
-          <img src="img/logos/logo-cb.png" alt="CargoBlue" class="mb-3" style="max-width: 180px;">
+          <img src="img/logos/CargobluePNGPreta.png" alt="CargoBlue" class="mb-3" style="max-width: 180px;">
           <p class="small">
             Conectando o Brasil de ponta a ponta com soluções logísticas inteligentes, seguras e ágeis.
           </p>
@@ -286,6 +316,7 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

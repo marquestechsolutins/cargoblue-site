@@ -138,3 +138,17 @@ window.addEventListener('scroll', function() {
     navbar.classList.remove('scrolled');
   }
 });
+
+const heroSlider = new Swiper('.hero-slider', {
+  loop: true,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
+  },
+  effect: 'fade',
+  fadeEffect: { crossFade: true },
+  speed: 1200
+});
+

@@ -3,10 +3,6 @@
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap');
 
-body {
-  font-family: 'Rajdhani', sans-serif;
-}
-
 /* =========================================================
    RESET & CONFIGURAÇÕES GERAIS
    ========================================================= */
@@ -91,7 +87,7 @@ p {
   background: linear-gradient(135deg, #136E94, #2eb8d7);
   color: #fff;
   font-size: 1.8rem;
-  padding: 15px 17px;
+  padding: 10px 15px;
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   z-index: 9999;
@@ -104,63 +100,103 @@ p {
   color: #fff;
 }
 
-/* =========================================================
-   HERO SECTION
-   ========================================================= */
+/* ===========================
+   Layout geral
+=========================== */
 
-.hero h1 {
-  color: #0a2c40;
-}
-
-.hero p {
-  color: #0a2c40;
-}
-
-.hero {
-  padding-top: 140px;
-  position: relative;
+.hero-split {
+  display: flex;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
-  color: white;
+}
+
+/* ===========================
+   LADO ESQUERDO (SLIDER)
+=========================== */
+
+.hero-left {
+  width: 60%;
+  height: 100%;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Divisor suave entre os lados */
+.hero-divider {
+  width: 8px; /* ajuste como quiser */
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #0a2c40,
+    #136e94,
+    #208cb8
+  );
+  backdrop-filter: blur(6px);
+  z-index: 5;
+}
+
+
+/* ===========================
+   LADO DIREITO (IMAGEM FIXA)
+=========================== */
+
+.hero-right {
+  width: 40%;
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  padding: 40px;
 }
 
-/* Fundo com imagem */
-.hero-bg {
+/* Imagem de fundo fixa com blur */
+.hero-right-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/bg/45.png');
+  background-image: url("/img/bg/img_8960.jpg"); /* ALTERE AQUI A IMAGEM FIXA */
   background-size: cover;
   background-position: center;
-  /* filter: brightness(0.8); */
-  z-index: 0;
+  filter: blur(6px) brightness(0.7);
+  transform: scale(1.1);
+  z-index: 1;
 }
 
-/* Fundo animado azul */
-.hero-servicos-bg {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(-45deg, #0a2c40, #136e94, #208cb8, #2eb8d7);
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
-}
-
-/* Conteúdo */
 .hero-content {
   position: relative;
-  z-index: 2;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  z-index: 10;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
 }
 
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.hero-content h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
+
+/* Faixa azul abaixo */
+.brand-line {
+  width: 80px;
+  height: 5px;
+  background: #208cb8;
+  margin: 0 auto 15px auto;
+  border-radius: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
 
 /* =========================================================
    SEÇÃO DE SERVIÇOS
@@ -209,14 +245,31 @@ p {
 /* Fundo diagonal */
 .servicos-bg {
   position: absolute;
-  top: 10%;
-  left: 0;
-  width: 55%;
-  height: 82%;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 18%;
   background: #e5e5e5;
-  border-radius: 50px;
   transform: skewY(0deg);
   z-index: 0;
+}
+
+/* Faixa azul de fundo na seção Serviços */
+.servicos-faixa {
+  position: absolute;
+  top: 0px; /* mesmo valor usado no certificado */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: #e5e5e5;
+  /* opacity: 0.15; */
+  z-index: 1;
+}
+
+/* Garantir que o conteúdo fique acima da faixa */
+.servicos .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================================================
@@ -469,4 +522,38 @@ p {
 
 .footer img {
   filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
+}
+
+/* ============================================================
+   FIX – IMAGENS DAS SEÇÕES (VERSÃO FINAL)
+   ============================================================ */
+
+/* Garante que os containers das imagens não distorçam */
+.service-box,
+.sobre .content,
+.sobre-img-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Imagens padronizadas – sem distorção ao dar zoom */
+.service-img,
+.tall,
+.sobre img {
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+/* Versão mobile */
+@media (max-width: 768px) {
+  .service-img,
+  .tall,
+  .sobre img {
+    max-height: 250px;
+  }
 }

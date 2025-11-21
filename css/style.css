@@ -161,7 +161,7 @@ p {
 .hero-right-bg {
   position: absolute;
   inset: 0;
-  background-image: url("/img/bg/img_8960.jpg"); /* ALTERE AQUI A IMAGEM FIXA */
+  background-image: url("../img/bg/img_8960.jpg"); /* ALTERE AQUI A IMAGEM FIXA */
   background-size: cover;
   background-position: center;
   filter: blur(6px) brightness(0.7);

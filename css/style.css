@@ -218,7 +218,9 @@ p {
   color: #ffffff;
 }
 
-
+.blindados{
+  background-color: #e5e5e5;
+}
 
 /* Botão */
 .servicos .btn-primary {
@@ -564,6 +566,25 @@ p {
 }
 
 .quem-somos-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10,44,64,0.88),
+    rgba(19,110,148,0.75)
+  );
+}
+
+/* HERO SERVICOS */
+.servicos-hero {
+  height: 75vh;
+  background-image: url("../img/bg/caminhao_conserto.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.servicos-hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(

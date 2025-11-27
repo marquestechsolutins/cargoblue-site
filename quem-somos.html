@@ -3,120 +3,351 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quem Somos - CargoBlue</title>
+  <title>CargoBlue - Quem Somos</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon-16x16.png">
 </head>
-<body>
 
-  <!-- NAV BAR -->
+<body>
+  <!-- NAVBAR -->
   <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container">
-      <a class="navbar-brand nav-link fw-bold" href="index.html" >CARGOBLUE
-        <!-- <img src="img/logos/logo-cb.png" alt="Cargoblue" height="200"> -->
+      <a class="navbar-brand nav-link fw-bold" href="index.html" >
+        <img src="img/logos/CargobluePNGBranca.png" alt="Cargoblue" height="40">
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="quem-somos.html">Quem Somos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero hero-small d-flex align-items-center text-center" id="sobre">
-    <div class="container">
-      <h1 data-aos="fade-down">Quem Somos</h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="200">
-        Conectamos distâncias com inovação, eficiência e tecnologia.
+  <!-- HERO QUEM SOMOS -->
+  <section class="quem-somos-hero d-flex align-items-center position-relative overflow-hidden">
+    <div class="quem-somos-overlay"></div>
+
+    <div class="container text-center position-relative" data-aos="fade-up">
+      <h1 class="hero-title">Quem Somos</h1>
+      <p class="hero-subtitle">
+        Soluções logísticas inteligentes, personalizadas e de alta performance
+        para conectar o Brasil com eficiência e confiança.
       </p>
     </div>
-    <div class="overlay"></div>
   </section>
 
   <!-- SOBRE A EMPRESA -->
-  <section class="sobre-empresa py-5">
+  <section id="sobre" class="py-5">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-          <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1000&q=80" alt="Caminhão CargoBlue" class="img-fluid rounded shadow">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Nossa História</h2>
+          <p class="section-text">
+            A Cargoblue nasceu com um propósito claro: oferecer soluções de logística e transporte
+            personalizadas, inteligentes e de alta qualidade.
+            Nossa atuação é focada em otimizar recursos, elevar a performance das operações
+            e transformar processos em estruturas robustas, seguras e orientadas por resultados.
+          </p>
+
+          <p class="section-text">
+            Contamos com uma equipe motivada e comprometida, apoiada pela sólida experiência do
+            nosso fundador — profissional com trajetória em grandes empresas nacionais e multinacionais.
+            Essa bagagem nos permite entregar soluções flexíveis, inovadoras e sob medida para cada cliente.
+          </p>
         </div>
+
         <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="mb-3 text-primary fw-bold">Nossa História</h2>
-          <p>
-            A <strong>CargoBlue</strong> nasceu com o propósito de revolucionar o transporte e a logística nacional,
-            oferecendo soluções inteligentes e tecnológicas para conectar empresas e pessoas com agilidade e confiança.
-          </p>
-          <p>
-            Com uma frota moderna e uma equipe altamente qualificada, garantimos excelência em cada entrega,
-            sempre prezando pela segurança, pontualidade e sustentabilidade.
-          </p>
+          <img src="img/bg/ftdrone_1.png" alt="Cargoblue do alto"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
         </div>
+
+      </div>
+      <div class="timeline-container" data-aos="fade-up">
+
+        <div class="timeline-line">
+          <div class="timeline-progress"></div>
+        </div>
+
+        <div class="timeline-points">
+          <div class="timeline-point" style="left: 0%;">
+            <span class="section-text">2020</span>
+            <p class="section-text">Fundação da Cargoblue</p>
+          </div>
+
+          <div class="timeline-point" style="left: 33%;">
+            <span class="section-text">2021</span>
+            <p class="section-text">Expansão dos serviços</p>
+          </div>
+
+          <div class="timeline-point" style="left: 66%;">
+            <span class="section-text">2022</span>
+            <p class="section-text">Tecnologia avançada</p>
+          </div>
+
+          <div class="timeline-point" style="left: 100%;">
+            <span class="section-text">2023</span>
+            <p class="section-text">Grandes Parcerias</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- VALORES -->
-  <section class="valores py-5 text-center">
+  <!-- MISSÃO / VISÃO / VALORES -->
+  <section class="py-5 bg-light position-relative">
     <div class="container">
-      <h2 class="text-white mb-5" data-aos="fade-up">Nossos Pilares</h2>
+      <div class="row mb-5 justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="section-title">Cultura e Propósito</h2>
+        </div>
+      </div>
+
       <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card valor-card p-4 shadow-sm">
-            <h4>Inovação</h4>
-            <p>Usamos tecnologia para otimizar processos e garantir eficiência máxima em cada operação.</p>
+
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card p-4 h-100">
+            <h3>Missão</h3>
+            <p>Entregar soluções logísticas inteligentes, ágeis e personalizadas, garantindo eficiência,
+              segurança e excelência operacional.</p>
           </div>
         </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="card p-4 h-100">
+            <h3>Visão</h3>
+            <p>Ser referência nacional em logística inteligente, reconhecida pela inovação,
+              qualidade e foco no cliente.</p>
+          </div>
+        </div>
+
         <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card valor-card p-4 shadow-sm">
-            <h4>Comprometimento</h4>
-            <p>Nosso foco é o sucesso de cada cliente. Entregamos o melhor, sempre.</p>
+          <div class="card p-4 h-100">
+            <h3>Valores</h3>
+            <p>Transparência, responsabilidade, segurança, ética, inovação e excelência em cada entrega.</p>
           </div>
         </div>
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="card valor-card p-4 shadow-sm">
-            <h4>Sustentabilidade</h4>
-            <p>Valorizamos práticas responsáveis que reduzem impactos ambientais e otimizam recursos.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICAÇÕES -->
+  <section class="certificado-qs py-5 text-center position-relative overflow-hidden">
+    <div class="certificado-qs"></div>
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-8">
+          <h2>Nossas Certificações</h2>
+        </div>
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Certificação da Anvisa</h2>
+          <p class="section-text">
+            A certificação da ANVISA garante que seguimos todos os requisitos necessários para o transporte de produtos voltados à saúde. 
+            Isso significa processos rigorosos, monitoramento contínuo e total comprometimento com a qualidade e segurança.
+            Com essa certificação, oferecemos mais confiança aos clientes, reduzimos riscos e asseguramos que cada operação seja realizada dentro das normas exigidas pelo setor.
+          </p>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/logos/anvisa_selopng.png" alt="Anvisa selo"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/logos/ecovadis_selopng.png" alt="Equipe Cargoblue"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Certificação da Ecovadis</h2>
+          <p class="section-text">
+          Ser certificados pela EcoVadis reforça nosso compromisso com práticas responsáveis nas áreas ambiental, social e de governança. 
+          A avaliação segue padrões internacionais, reconhecendo empresas que atuam de forma ética e sustentável.
+          Esse selo confirma que estamos evoluindo de maneira consistente, promovendo uma cadeia logística mais resiliente, transparente e alinhada às melhores iniciativas globais de responsabilidade corporativa.
+          </p>
+        </div>
+
+
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Certificação da Exame</h2>
+          <p class="section-text">
+            DESCRICAO DA CERTIFICACAO MOTIVOS E BENEFICIOS.
+            DESCRICAO DA CERTIFICACAO MOTIVOS E BENEFICIOS.
+            DESCRICAO DA CERTIFICACAO MOTIVOS E BENEFICIOS.
+            DESCRICAO DA CERTIFICACAO MOTIVOS E BENEFICIOS.
+          </p>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/logos/selo_examepng.png" alt="Equipe Cargoblue"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POR QUE ESCOLHER A CARGOBLUE -->
+  <section id="why-us-section" class="py-5">
+    <div class="container">
+
+      <div class="row mb-5 justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="section-title">Por que escolher a Cargoblue?</h2>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="left">
+          <ul class="why-list">
+            <li><i class="bi bi-check2-circle"></i> Equipe com mais de&nbsp;<span class="counter" data-target="100">0</span>&nbsp;colaboradores qualificados</li>
+            <br>
+            <br>
+            <li><i class="bi bi-check2-circle"></i> Cerca de&nbsp;<span class="counter" data-target="110">0</span>&nbsp;veículos à sua disposição!</li>
+            <br>
+            <br>
+            <li><i class="bi bi-check2-circle"></i> Mais de&nbsp;<span class="counter" data-target="1200000">0</span>&nbsp;km rodados com segurança</li>
+            <br>
+            <br>
+            <li><i class="bi bi-check2-circle"></i> Mais de&nbsp;<span class="counter" data-target="25000">0</span>&nbsp;entregas realizadas com sucesso</li>
+            <br>
+            <br>
+            <li><i class="bi bi-check2-circle"></i> Nossos veículos alcançaram&nbsp;<span class="counter" data-target="8600000">0</span>&nbsp;KM rodado!</li>
+            <br>
+            <br>
+          </ul>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-right">
+          <div class="d-flex flex-column gap-4">
+            <img src="img/bg/_mg_0786.jpg" alt="Carreta na estrada" class="img-moov img-fluid rounded-4 shadow-lg service-img">
+            <img src="img/bg/IMG_8910.jpg" alt="Dois caminhoes" class="img-moov img-fluid rounded-4 shadow-lg tall">
           </div>
         </div>
       </div>
+
+    </div>
+  </section>
+
+  <!-- EQUIPE / ACAO SOCIAL -->
+  <section class="equipe-ac py-5 text-center position-relative overflow-hidden">
+    <div class="equipe-ac"></div>
+
+    <div class="container" data-aos="fade-up">
+
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-8">
+          <h2>Conheça um pouco da nossa equipe</h2>
+        </div>
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Nossos colaboradoes</h2>
+          <p class="section-text">
+          Ser Cargoblue é fazer parte de uma equipe que acredita em parceria, evolução e responsabilidade. 
+          Aqui, cada profissional tem voz, recebe apoio para crescer e contribui diretamente para entregar soluções logísticas seguras e eficientes. 
+          Valorizamos pessoas que vestem a camisa, cuidam do que fazem e ajudam a construir um ambiente onde o resultado aparece porque o time trabalha junto.
+          </p>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/bg/equipe_01.jpg" alt="Equipe Cargoblue"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/bg/" alt="Imagem de ação social"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title">Ação social</h2>
+          <p class="section-text">
+          Acreditamos que cuidar das pessoas ao nosso redor faz parte do nosso propósito. 
+          Por isso, apoiamos iniciativas que promovem acolhimento, solidariedade e oportunidades para quem mais precisa. 
+          Cada ação reflete o compromisso da Cargoblue em construir um impacto real, reforçando a importância da empatia e da responsabilidade com a comunidade.
+          </p>
+        </div>
+
+
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h2 class="section-title">Estrutura da Cargoblue</h2>
+          <p class="section-text">
+          Nossa estrutura foi desenvolvida para garantir operações ágeis, seguras e eficientes. 
+          Contamos com equipamentos modernos, equipes especializadas e processos bem definidos, que sustentam cada etapa do trabalho. 
+          Tudo é pensado para oferecer confiabilidade, organização e suporte completo aos nossos clientes, mantendo um padrão elevado de qualidade em cada entrega.
+          </p>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <img src="img/bg/estrutua_empresa_02.png" alt="Estrutura Cargoblue"
+              class="img-fluid rounded-4 shadow-lg equipe-img">
+        </div>
+
+      </div>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer text-light pt-5 pb-3">
     <div class="container">
+      
       <div class="row gy-4">
-        
-        <!-- COLUNA 1 - LOGO / DESCRIÇÃO -->
+
         <div class="col-md-4 text-center text-md-start">
-          <img src="img/logos/logo-cb.png" alt="CargoBlue" class="mb-3" style="max-width: 180px;">
-          <p class="small">
-            Conectando o Brasil de ponta a ponta com soluções logísticas inteligentes, seguras e ágeis.
-          </p>
+          <img src="img/logos/CargobluePNGBranca.png" style="max-width:180px" class="mb-3">
+          <p class="small">Conectando o Brasil com soluções logísticas seguras, ágeis e inteligentes.</p>
         </div>
 
-        <!-- COLUNA 2 - LINKS -->
         <div class="col-md-4 text-center">
           <h5 class="mb-3 text-uppercase">Links Úteis</h5>
-          <ul class="list-unstyled small">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="quem-somos.html" class="footer-link">Quem Somos</a></li>
-            <li><a href="servicos.html" class="footer-link">Serviços</a></li>
-            <li><a href="trabalhe-conosco.html" class="footer-link">Trabalhe Conosco</a></li>
-          </ul>
+            <ul class="list-unstyled small">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="quem-somos.html" class="footer-link">Quem Somos</a></li>
+              <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+              <li><a href="trabalhe-conosco.html" class="footer-link">Trabalhe Conosco</a></li>
+            </ul>
         </div>
 
-        <!-- COLUNA 3 - CONTATO -->
         <div class="col-md-4 text-center text-md-end">
           <h5 class="mb-3 text-uppercase">Contato</h5>
           <p class="small mb-1">📍 Rua Ipê, 365 - Barueri, SP</p>
@@ -129,17 +360,14 @@
       <hr class="my-4 opacity-25">
 
       <div class="text-center small">
-        <p class="mb-0">&copy; 2025 <strong>CargoBlue Logística e Transportes</strong>. Todos os direitos reservados.</p>
+        <p class="mb-0">© 2025 CargoBlue Logística e Transportes. Todos os direitos reservados.</p>
         <p class="mt-1 text-secondary">Desenvolvido por TechMarques</p>
       </div>
     </div>
   </footer>
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5511999999999" 
-    class="btn-whatsapp" 
-    target="_blank" 
-    title="Fale conosco no WhatsApp">
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <a href="https://wa.me/5511999999999" class="btn-whatsapp" target="_blank">
     <i class="bi bi-whatsapp"></i>
   </a>
 
@@ -147,5 +375,60 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const points = document.querySelectorAll(".timeline-point");
+
+      // tempos proporcionais aos pontos
+      const delays = [0, 2000, 3800, 9000]; // milissegundos
+      
+      delays.forEach((time, index) => {
+        setTimeout(() => {
+          points[index].classList.add("active");
+        }, time);
+      });
+
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200; // A velocidade pode ser ajustada
+
+      const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        // Calcula o incremento
+        const inc = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + inc);
+          setTimeout(() => animateCounter(counter), 1);
+        } else {
+          counter.innerText = target.toLocaleString('pt-BR');
+        }
+      };
+
+      const whyUsSection = document.getElementById('why-us-section');
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            counters.forEach(counter => {
+              // Garante que a animação só rode uma vez
+              if (!counter.dataset.animated) {
+                animateCounter(counter);
+                counter.dataset.animated = "true";
+              }
+            });
+          }
+        });
+      }, { threshold: 0.5 }); // Inicia quando 50% da seção estiver visível
+
+      observer.observe(whyUsSection);
+    });
+  </script>
 </body>
 </html>

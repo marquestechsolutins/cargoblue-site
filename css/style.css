@@ -218,17 +218,7 @@ p {
   color: #ffffff;
 }
 
-/* Cards */
-.service-card {
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  background: linear-gradient(145deg, #136e94, #0a2c40);
-}
 
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px #136E94;
-}
 
 /* Botão */
 .servicos .btn-primary {
@@ -276,7 +266,7 @@ p {
    SEÇÃO DE CERTIFICADOS
    ========================================================= */
 .certificado {
-  background: #f8f9fb;
+  background: #e5e5e5;
   color: #000;
 }
 
@@ -286,18 +276,6 @@ p {
 
 .certificado p {
   color: #ffffff;
-}
-
-/* Cards */
-.certificado-card {
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  background: linear-gradient(145deg, #136e94, #0a2c40);
-}
-
-.certificado-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px #136E94;
 }
 
 /* Botão */
@@ -332,15 +310,8 @@ p {
   color: white;
 }
 
-.service-card-sobre {
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  background: linear-gradient(145deg, #2eb8d7, #136E94);
-}
-
-.service-card-sobre:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px #136E94;
+.sobre h2 {
+  color: #ffffff;
 }
 
 .sobre .btn-primary {
@@ -378,17 +349,7 @@ p {
   color: white;
 }
 
-.valor-card {
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.valor-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
-}
 
 /* =========================================================
    SEÇÃO CLIENTES
@@ -483,6 +444,23 @@ p {
 }
 
 /* =========================================================
+   IMG EQUIPE
+   ========================================================= */
+.equipe-img {
+  width: 100% !important;
+  height: 500px !important; /* ajuste como quiser */
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+/* Zoom suave opcional ao passar o mouse */
+.equipe-img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================================
    HERO MENOR (PÁGINAS INTERNAS)
    ========================================================= */
 .hero-small {
@@ -556,4 +534,292 @@ p {
   .sobre img {
     max-height: 250px;
   }
+}
+
+/* img com leve movimento */
+.img-moov:hover {
+  transform: scale(1.05);
+}
+
+.img-moov {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+
+/* ===========================
+   HERO - QUEM SOMOS
+=========================== */
+
+/* HERO QUEM SOMOS */
+.quem-somos-hero {
+  height: 75vh;
+  background-image: url("../img/bg/todos_reunidos02.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.quem-somos-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(10,44,64,0.88),
+    rgba(19,110,148,0.75)
+  );
+}
+
+/* TEXTOS */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0a2c40;
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* BOTÃO HERO */
+.btn-hero {
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #208cb8, #2eb8d7);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  transform: translateY(-3px);
+}
+
+/* CARTÕES MISSÃO/VISÃO/VALORES */
+
+/* LISTA POR QUE ESCOLHER */
+.why-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #000000;
+}
+
+.why-list i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+  color: #208cb8;
+}
+
+/* GALERIA */
+.equipe-gallery-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  transition: 0.35s;
+}
+
+.equipe-gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* CERTIFICADOS */
+
+.certificado-qs {
+  background: #f8f9fb;
+  color: #000;
+}
+
+.certificado-qs h2 {
+  color: #136e94;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: linear-gradient(145deg, #136e94, #0a2c40);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px #136E94;
+}
+
+.card h3,
+.card p {
+  color: #ffffff;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botão */
+.certificado-qs .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.certificado-qs .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+}
+
+.certificado-qs {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 18%;
+  background: #e5e5e5;
+  transform: skewY(0deg);
+  z-index: 0;
+}
+
+.certificado-qs p {
+  color: #000000;
+}
+
+
+/* SEÇÃO DE RESULTADOS */
+.resultados-section {
+  background: #f8f9fa;
+}
+
+.counter-box {
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  transition: transform .3s ease, box-shadow .3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.counter-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #208cb8; /* azul principal */
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #0a2c40;
+}
+
+/* equipe/acao social */
+
+.equipe-ac {
+  background: #f8f9fb;
+  color: #000;
+}
+
+.equipe-ac h2 {
+  color: #136e94;
+}
+
+.equipe-ac .btn-primary {
+  background: linear-gradient(90deg, #136e94, #0a2c40);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.equipe-ac .btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+}
+
+.equipe-ac {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 18%;
+  background: #e5e5e5;
+  transform: skewY(0deg);
+  z-index: 0;
+}
+
+.equipe-ac p {
+  color: #000000;
+}
+
+/* LINHA DO TEMPO */
+.timeline-container {
+  position: relative;
+  margin-top: 90px;
+  padding-top: 100px;
+}
+
+/* Linha */
+.timeline-line {
+  height: 15px;
+  background: #dcdcdc;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Linha enchendo */
+.timeline-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #0a2c40, #208cb8);
+  animation: fillLine 10s forwards;
+}
+
+@keyframes fillLine {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Pontos alinhados horizontalmente */
+.timeline-point {
+  position: absolute;
+  top: -30px;                 /* sobe os pontos */
+  transform: translateX(-50%);
+  text-align: center;
+
+  opacity: .3;                /* começa apagado */
+  filter: grayscale(100%);
+  transition: .3s;
+}
+
+/* Bolinha */
+.timeline-point::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #136e94;
+  border-radius: 50%;
+  border: 3px solid #e2e2e2;
+  display: block;
+  margin: 0 auto 5px auto;
+}
+
+/* Acende */
+.timeline-point.active {
+  opacity: 1;
+  filter: grayscale(0);
 }

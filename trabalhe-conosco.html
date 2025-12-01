@@ -14,44 +14,42 @@
   <!-- NAV BAR -->
   <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
     <div class="container">
-      <a class="navbar-brand nav-link fw-bold" href="index.html" >CARGOBLUE
-        <!-- <img src="img/logos/logo-cb.png" alt="Cargoblue" height="200"> -->
+      <a class="navbar-brand nav-link fw-bold" href="index.html" >
+        <img src="img/logos/CargobluePNGBranca.png" alt="Cargoblue" height="40">
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link active" href="quem-somos.html">Quem Somos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
-          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+          <li class="nav-item"><a class="nav-link" href="trabalhe-conosco.html">Trabalhe Conosco</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero hero-small d-flex align-items-center text-center">
-    <div class="container">
-      <h1 data-aos="fade-down">Trabalhe Conosco</h1>
-      <p class="lead" data-aos="fade-up" data-aos-delay="200">
-        Faça parte de uma equipe que move o futuro da logística.
+  <!-- HERO SERVICOS -->
+  <section class="trabalhe-hero d-flex align-items-center position-relative overflow-hidden">
+    <div class="trabalhe-hero-overlay"></div>
+
+    <div class="container text-center position-relative" data-aos="fade-up">
+      <h1 class="hero-title">Faça parte da CargoBlue</h1>
+      <p class="hero-subtitle">
+        Estamos sempre em busca de talentos que compartilham nosso propósito de inovação, eficiência e compromisso.
       </p>
+      <p>Envie seu currículo e venha crescer conosco!</p>
+      
     </div>
-    <div class="overlay"></div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- FORMULÁRIO -->
   <section class="trabalhe py-5">
     <div class="container text-center">
-      <h2 class="text-primary fw-bold mb-4" data-aos="fade-up">Faça parte da CargoBlue</h2>
-      <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200">
-        Estamos sempre em busca de talentos que compartilham nosso propósito de inovação, eficiência e compromisso.
-        Envie seu currículo e venha crescer conosco!
-      </p>
-
       <!-- FORMULÁRIO -->
       <div class="row justify-content-center" data-aos="zoom-in">
         <div class="col-lg-6">
@@ -98,28 +96,24 @@
   <!-- FOOTER -->
   <footer class="footer text-light pt-5 pb-3">
     <div class="container">
+      
       <div class="row gy-4">
-        
-        <!-- COLUNA 1 - LOGO / DESCRIÇÃO -->
+
         <div class="col-md-4 text-center text-md-start">
-          <img src="img/logos/logo-cb.png" alt="CargoBlue" class="mb-3" style="max-width: 180px;">
-          <p class="small">
-            Conectando o Brasil de ponta a ponta com soluções logísticas inteligentes, seguras e ágeis.
-          </p>
+          <img src="img/logos/CargobluePNGBranca.png" style="max-width:180px" class="mb-3">
+          <p class="small">Conectando o Brasil com soluções logísticas seguras, ágeis e inteligentes.</p>
         </div>
 
-        <!-- COLUNA 2 - LINKS -->
         <div class="col-md-4 text-center">
           <h5 class="mb-3 text-uppercase">Links Úteis</h5>
-          <ul class="list-unstyled small">
-            <li><a href="index.html" class="footer-link">Home</a></li>
-            <li><a href="quem-somos.html" class="footer-link">Quem Somos</a></li>
-            <li><a href="servicos.html" class="footer-link">Serviços</a></li>
-            <li><a href="trabalhe-conosco.html" class="footer-link">Trabalhe Conosco</a></li>
-          </ul>
+            <ul class="list-unstyled small">
+              <li><a href="index.html" class="footer-link">Home</a></li>
+              <li><a href="quem-somos.html" class="footer-link">Quem Somos</a></li>
+              <li><a href="servicos.html" class="footer-link">Serviços</a></li>
+              <li><a href="trabalhe-conosco.html" class="footer-link">Trabalhe Conosco</a></li>
+            </ul>
         </div>
 
-        <!-- COLUNA 3 - CONTATO -->
         <div class="col-md-4 text-center text-md-end">
           <h5 class="mb-3 text-uppercase">Contato</h5>
           <p class="small mb-1">📍 Rua Ipê, 365 - Barueri, SP</p>
@@ -132,17 +126,14 @@
       <hr class="my-4 opacity-25">
 
       <div class="text-center small">
-        <p class="mb-0">&copy; 2025 <strong>CargoBlue Logística e Transportes</strong>. Todos os direitos reservados.</p>
+        <p class="mb-0">© 2025 CargoBlue Logística e Transportes. Todos os direitos reservados.</p>
         <p class="mt-1 text-secondary">Desenvolvido por TechMarques</p>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5511999999999" 
-    class="btn-whatsapp" 
-    target="_blank" 
-    title="Fale conosco no WhatsApp">
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <a href="https://wa.me/5511999999999" class="btn-whatsapp" target="_blank">
     <i class="bi bi-whatsapp"></i>
   </a>
 

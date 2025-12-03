@@ -139,16 +139,16 @@ window.addEventListener('scroll', function() {
   }
 });
 
-const heroSlider = new Swiper('.hero-slider', {
-  loop: true,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-  },
-  effect: 'fade',
-  fadeEffect: { crossFade: true },
-  speed: 1200
-});
+// const heroSlider = new Swiper('.hero-slider', {
+//   loop: true,
+//   allowTouchMove: false,
+//   autoplay: {
+//     delay: 5000,
+//     disableOnInteraction: false,
+//     pauseOnMouseEnter: false,
+//   },
+//   effect: 'fade',
+//   fadeEffect: { crossFade: true },
+//   speed: 1200
+// });
 

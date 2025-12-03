@@ -35,11 +35,11 @@ p {
 /* =========================================================
    NAVBAR
    ========================================================= */
-.custom-navbar {
+.navbar {
   border-radius: 10px;
   margin: 20px auto;
   width: 90%;
-  background: linear-gradient(145deg, #136E94);
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
 }
 
 .navbar-brand {
@@ -84,7 +84,7 @@ p {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: linear-gradient(135deg, #136E94, #2eb8d7);
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
   color: #fff;
   font-size: 1.8rem;
   padding: 10px 15px;
@@ -96,7 +96,7 @@ p {
 
 .btn-whatsapp:hover {
   transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 0 20px rgba(46,184,215,0.7);
+  box-shadow: 0 0 20px #136e94;
   color: #fff;
 }
 
@@ -115,9 +115,11 @@ p {
    LADO ESQUERDO (SLIDER)
 =========================== */
 
+
+
 .hero-left {
-  width: 60%;
-  height: 100%;
+  width: 100%;
+  height: 80%;
 }
 
 .hero-slide {
@@ -202,12 +204,12 @@ p {
    SEÇÃO DE SERVIÇOS
    ========================================================= */
 .servicos {
-  background: #f8f9fb;
+  background: #E7EDF2;
   color: #000;
 }
 
 .servicos h2 {
-  color: #136e94;
+  color: #0a2c40;
 }
 
 .servicos h4 {
@@ -223,16 +225,16 @@ p {
 }
 
 /* Botão */
-.servicos .btn-primary {
-  background: linear-gradient(90deg, #136e94, #0a2c40);
+/* .servicos .btn-primary {
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
   border: none;
   transition: all 0.3s ease;
 }
 
 .servicos .btn-primary:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
-}
+  box-shadow: 0 0 15px #208cb8;
+} */
 
 /* Fundo diagonal */
 .servicos-bg {
@@ -268,12 +270,12 @@ p {
    SEÇÃO DE CERTIFICADOS
    ========================================================= */
 .certificado {
-  background: #e5e5e5;
+  background: #E7EDF2;
   color: #000;
 }
 
 .certificado h2 {
-  color: #136e94;
+  color: #0a2c40;
 }
 
 .certificado p {
@@ -281,16 +283,7 @@ p {
 }
 
 /* Botão */
-.certificado .btn-primary {
-  background: linear-gradient(90deg, #136e94, #0a2c40);
-  border: none;
-  transition: all 0.3s ease;
-}
 
-.certificado .btn-primary:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
-}
 
 .certificado-bg {
   position: absolute;
@@ -308,7 +301,7 @@ p {
    SEÇÃO SOBRE
    ========================================================= */
 .sobre {
-  background: linear-gradient(135deg, #208cb8, #0a2c40);
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
   color: white;
 }
 
@@ -316,16 +309,16 @@ p {
   color: #ffffff;
 }
 
-.sobre .btn-primary {
+/* .sobre .btn-primary {
   background: linear-gradient(90deg, #0a2c40, #136e94);
   border: none;
   transition: all 0.3s ease;
-}
+} */
 
-.sobre .btn-primary:hover {
+/* .sobre .btn-primary:hover {
   transform: scale(1.08);
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
-}
+} */
 
 /* =========================================================
    SOBRE A EMPRESA
@@ -356,15 +349,15 @@ p {
 /* =========================================================
    SEÇÃO CLIENTES
    ========================================================= */
-.clientes-empresa {
-  color: #000;
+.clientes {
+  background: #E7EDF2;
 }
 
 .clientes h2 {
-  color: #136e94;
+  color: #0a2c40;
 }
 
-.clientes .btn-primary {
+/* .clientes .btn-primary {
   background: linear-gradient(90deg, #136e94, #0a2c40);
   border: none;
   transition: all 0.3s ease;
@@ -373,7 +366,7 @@ p {
 .clientes .btn-primary:hover {
   transform: scale(1.08);
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
-}
+} */
 
 .clientes-empresa img {
   border-radius: 15px;
@@ -434,7 +427,7 @@ p {
   box-shadow: 0 0 5px #136E94;
 }
 
-.formulario .btn-primary {
+/* .formulario .btn-primary {
   background: linear-gradient(90deg, #2eb8d7, #136E94);
   border: none;
   transition: all 0.3s ease;
@@ -443,7 +436,7 @@ p {
 .formulario .btn-primary:hover {
   background: linear-gradient(90deg, #2eb8d7, #136E94);
   box-shadow: 0 5px 15px #136E94;
-}
+} */
 
 /* =========================================================
    IMG EQUIPE
@@ -483,14 +476,27 @@ p {
    FOOTER
    ========================================================= */
 .footer {
-  background: linear-gradient(135deg, #0a2a45, #136E94);
-  color: #f1f1f1;
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
+  color: #0a2c40;
   position: relative;
   z-index: 10;
 }
 
+.footer h5 {
+  color: #208cb8;
+}
+
+.footer p{
+  color: #ffffff;
+}
+
+.footer hr {
+  border-color: #ffffff;
+  margin: 20px 0;
+}
+
 .footer-link {
-  color: #cce7f8;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -503,7 +509,6 @@ p {
 .footer img {
   filter: drop-shadow(0 0 8px rgba(0,0,0,0.3));
 }
-
 /* ============================================================
    FIX – IMAGENS DAS SEÇÕES (VERSÃO FINAL)
    ============================================================ */
@@ -568,10 +573,7 @@ p {
 .quem-somos-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(10,44,64,0.88),
-    rgba(19,110,148,0.75)
-  );
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
 }
 
 /* HERO SERVICOS */
@@ -625,20 +627,7 @@ p {
   color: #333;
 }
 
-/* BOTÃO HERO */
-.btn-hero {
-  padding: 12px 32px;
-  background: linear-gradient(90deg, #208cb8, #2eb8d7);
-  color: white;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
 
-.btn-hero:hover {
-  transform: translateY(-3px);
-}
 
 /* CARTÕES MISSÃO/VISÃO/VALORES */
 
@@ -691,7 +680,7 @@ p {
 .card {
   border-radius: 10px;
   transition: all 0.3s ease;
-  background: linear-gradient(145deg, #136e94, #0a2c40);
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
 }
 
 .card:hover {
@@ -711,15 +700,15 @@ p {
 }
 
 /* Botão */
-.certificado-qs .btn-primary {
-  background: linear-gradient(90deg, #136e94, #0a2c40);
+.btn-primary {
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
   border: none;
   transition: all 0.3s ease;
 }
 
-.certificado-qs .btn-primary:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
+.btn-primary:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 15px #136e94;
 }
 
 .certificado-qs {
@@ -779,7 +768,7 @@ p {
   color: #136e94;
 }
 
-.equipe-ac .btn-primary {
+/* .equipe-ac .btn-primary {
   background: linear-gradient(90deg, #136e94, #0a2c40);
   border: none;
   transition: all 0.3s ease;
@@ -788,7 +777,7 @@ p {
 .equipe-ac .btn-primary:hover {
   transform: scale(1.08);
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
-}
+} */
 
 .equipe-ac {
   position: absolute;

@@ -4,6 +4,9 @@
 #2eb8d7
 #4dffff
 
+#E7EDF2
+#A5B3C2
+#0D1A24
 
 git add .
 git commit

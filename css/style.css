@@ -220,8 +220,24 @@ p {
 }
 
 .infos-servicos{
-  background-color: #E7EDF2;
+  /* background-color: #E7EDF2; */
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);  
 }
+
+.infos-servicos h2 {
+  color: #ffffff;
+}
+
+.infos-servicos p {
+  color: #ffffff;
+}
+
+.hrcor {
+  border-color: #0a2c40;
+}
+
+
+
 
 /* Botão */
 /* .servicos .btn-primary {

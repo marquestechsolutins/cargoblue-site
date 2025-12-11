@@ -50,51 +50,58 @@
       <h2 class="section-title" data-aos="fade-up">Serviços</h2>
       <div class="row g-4 mt-4">
 
-        <!-- Milk-Run -->
-        <div class="col-md-6" data-aos="fade-right">
+        <div class="col-md-4" data-aos="fade-right">
           <div class="card p-4 h-100">
             <h4>Sistema Milk-Run</h4>
-            <p>Coletas programadas em múltiplos pontos com rota única, garantindo eficiência e redução de custos.</p>
+            <p>
+              Operação logística em que um único veículo realiza coletas programadas em múltiplos pontos, 
+              com data e horário definidos. Embalagens retornáveis são deixadas para coletas futuras, 
+              garantindo eficiência e redução de custos.
+            </p>
           </div>
         </div>
 
-        <!-- In House -->
-        <div class="col-md-6" data-aos="fade-left">
+        <div class="col-md-4" data-aos="fade-right">
           <div class="card p-4 h-100">
-            <h4>Gestão de Operações In House</h4>
-            <p>Equipe dedicada dentro do cliente para gerenciar recebimento, armazenagem, movimentação e expedição.</p>
+            <h4>Hot Line Express</h4>
+            <p>
+              Transporte exclusivo e urgente com veículo dedicado,
+              garantindo saída e chegada em horários previamente definidos para 
+              máxima agilidade e confiabilidade.
+            </p>
           </div>
         </div>
 
-        <!-- Hot Line -->
-        <div class="col-md-6" data-aos="fade-right">
-          <div class="card p-4 h-100">
-            <h4>Hot Line – Expresso</h4>
-            <p>Transporte urgente com veículo exclusivo, garantindo máxima agilidade e horários definidos.</p>
-          </div>
-        </div>
-
-        <!-- First Mile -->
-        <div class="col-md-6" data-aos="fade-left">
+        <div class="col-md-4" data-aos="fade-left">
           <div class="card p-4 h-100">
             <h4>First Mile</h4>
-            <p>Coleta no fabricante e envio aos Centros de Distribuição, iniciando a cadeia logística com eficiência.</p>
+            <p>
+              Etapa inicial do transporte, com coleta de mercadorias nos 
+              fabricantes e envio aos Centros de Distribuição (CDs),
+              assegurando o início eficiente da cadeia logística.
+            </p>
           </div>
         </div>
 
-        <!-- Middle Mile -->
         <div class="col-md-6" data-aos="fade-right">
           <div class="card p-4 h-100">
             <h4>Middle Mile</h4>
-            <p>Transferências entre Centros de Distribuição e Centros de Apoio, conectando as etapas operacionais.</p>
+            <p>
+              Fase intermediária da logística, com transferências dos 
+              Centros de Distribuição para os Centros de Apoio dos 
+              clientes, preparando o caminho para as entregas finais.
+            </p>
           </div>
         </div>
 
-        <!-- Line Haul -->
         <div class="col-md-6" data-aos="fade-left">
           <div class="card p-4 h-100">
             <h4>Line Haul</h4>
-            <p>Transporte de carga lotação em rotas fixas entre pontos A e B, com foco em volume e eficiência.</p>
+            <p>
+              Transporte de carga lotação em rotas fixas entre pontos A e B, 
+              podendo ir direto ao cliente. 
+              Similar ao Middle Mile, com foco em eficiência e alto volume.
+            </p>
           </div>
         </div>
 
@@ -213,7 +220,6 @@
 
     </div>
   </section>
-
 
   <section class="clientes py-5 text-center position-relative overflow-hidden">
     <div class="container position-relative" data-aos="fade-up">
@@ -350,7 +356,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll(".counter");
-      const duration = 6000; // 5 segundos
+      const duration = 8000; // 5 segundos
 
       counters.forEach(counter => {
         const target = +counter.dataset.target;
@@ -396,7 +402,7 @@
         options: {
           responsive: true,
           animation: {
-            duration: 4500,
+            duration: 8000,
             easing: "easeOutQuart"
           },
           plugins: {

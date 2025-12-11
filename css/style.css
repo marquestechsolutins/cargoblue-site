@@ -104,11 +104,20 @@ p {
    Layout geral
 =========================== */
 
-.hero-split {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
+.hero-servicos {
+  height: 75vh;
+  background-image: url("../img/bg/caminhao_cargobluegrande.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #E7EDF2;
+}
+
+.hero-servicos .container {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  /* transform: translateY(-50%); */
 }
 
 /* ===========================
@@ -251,16 +260,20 @@ p {
   box-shadow: 0 0 15px #208cb8;
 } */
 
-/* Fundo diagonal */
-.servicos-bg {
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
+/* faixa de servicos */
+.faixa {
+  width: 28%;
   height: 18%;
-  background: #e5e5e5;
-  transform: skewY(0deg);
-  z-index: 0;
+  background: #0a2c40;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px #0a2c40;
+  border: 1px solid #0D1A24;
+
+  position: absolute;
+  left: 0;
+  top: 43%;
+  transform: translateY(-50%);
 }
 
 /* Faixa azul de fundo na seção Serviços */
@@ -279,6 +292,10 @@ p {
 .servicos .container {
   position: relative;
   z-index: 2;
+}
+
+.introducao {
+  background: #E7EDF2;
 }
 
 /* =========================================================
@@ -324,6 +341,10 @@ p {
   color: #ffffff;
 }
 
+.sobre-empresa {
+  background: #E7EDF2;
+}
+
 /* .sobre .btn-primary {
   background: linear-gradient(90deg, #0a2c40, #136e94);
   border: none;
@@ -335,21 +356,11 @@ p {
   box-shadow: 0 0 15px rgba(46, 184, 215, 0.6);
 } */
 
-/* =========================================================
-   SOBRE A EMPRESA
-   ========================================================= */
-.sobre-empresa {
-  color: #000;
+/* CULTURA E PROPOSITO */
+.cultura {
+  background: #E7EDF2;
 }
 
-.sobre-empresa img {
-  border-radius: 15px;
-  transition: transform 0.4s ease;
-}
-
-.sobre-empresa img:hover {
-  transform: scale(1.03);
-}
 
 /* =========================================================
    SEÇÃO VALORES
@@ -370,6 +381,10 @@ p {
 
 .clientes h2 {
   color: #0a2c40;
+}
+
+.icon-lg {
+  font-size: 50px !important;
 }
 
 /* .clientes .btn-primary {
@@ -460,7 +475,7 @@ p {
   height: 500px !important; /* ajuste como quiser */
   object-fit: cover;
   border-radius: 16px;
-  box-shadow: 0 6px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 25px #0D1A24;
   transition: transform 0.4s ease;
 }
 
@@ -568,6 +583,7 @@ p {
   object-position: center; */
   border-radius: 16px;
   transition: transform 0.4s ease;
+  /* box-shadow: 0 6px 25px #0D1A24; */
 }
 
 
@@ -687,7 +703,7 @@ p {
 /* CERTIFICADOS */
 
 .certificado-qs {
-  background: #f8f9fb;
+  background: #E7EDF2;
   color: #000;
 }
 
@@ -729,6 +745,44 @@ p {
   transform: scale(1.08) !important;
   box-shadow: 0 0 15px #136e94;
 }
+
+.btn-animado {
+  position: relative;
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  color: #E7EDF2;
+  border: none;
+  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(180deg, #0A2C40, #0D1A24);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.btn-animado::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #136e94, #208cb8, #2eb8d7);
+  transition: width 0.45s ease;
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.btn-animado:hover::before {
+  width: 100%;
+}
+
+.btn-animado:hover {
+  transform: scale(1.08) !important;
+  box-shadow: 0 0 15px #136e94;
+}
+
+
 
 .certificado-qs {
   position: absolute;

@@ -106,7 +106,7 @@ p {
 
 .hero-servicos {
   height: 75vh;
-  background-image: url("../img/bg/caminhao_movimento_estrada5.png");
+  background-image: url("../img/bg/caminhao_movimento.png");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -311,7 +311,7 @@ p {
 }
 
 .certificado p {
-  color: #ffffff;
+  color: #0a2c40;
 }
 
 /* Botão */
@@ -708,7 +708,7 @@ p {
 }
 
 .certificado-qs h2 {
-  color: #136e94;
+  color: #0a2c40;
 }
 
 /* Cards */
@@ -833,12 +833,12 @@ p {
 /* equipe/acao social */
 
 .equipe-ac {
-  background: #f8f9fb;
+  background: #E7EDF2 !important;
   color: #000;
 }
 
 .equipe-ac h2 {
-  color: #136e94;
+  color: #0a2c40;
 }
 
 /* .equipe-ac .btn-primary {
@@ -867,61 +867,146 @@ p {
   color: #000000;
 }
 
-/* LINHA DO TEMPO */
-.timeline-container {
+
+/* ========================
+   BASE DO TIMELINE
+======================== */
+
+#timeline-section {
   position: relative;
-  margin-top: 90px;
-  padding-top: 100px;
+  background: #E7EDF2;
 }
 
-/* Linha */
+.timeline-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Linha vertical */
 .timeline-line {
-  height: 15px;
-  background: #dcdcdc;
-  border-radius: 50px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Linha enchendo */
-.timeline-progress {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #0a2c40, #208cb8);
-  animation: fillLine 10s forwards;
-}
-
-@keyframes fillLine {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
-/* Pontos alinhados horizontalmente */
-.timeline-point {
   position: absolute;
-  top: -30px;                 /* sobe os pontos */
+  left: 50%;
   transform: translateX(-50%);
-  text-align: center;
-
-  opacity: .3;                /* começa apagado */
-  filter: grayscale(100%);
-  transition: .3s;
+  width: 4px;
+  height: 0;
+  background: #136e94;
+  transition: height 1.2s ease-out;
 }
 
-/* Bolinha */
-.timeline-point::before {
-  content: "";
+/* Cada item */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+/* Bolinha (ponto do timeline) */
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 18px;
   height: 18px;
-  background: #136e94;
+  background: #0a2c40;
   border-radius: 50%;
-  border: 3px solid #e2e2e2;
-  display: block;
-  margin: 0 auto 5px auto;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-/* Acende */
-.timeline-point.active {
+.timeline-marker.show {
   opacity: 1;
-  filter: grayscale(0);
+}
+
+.timeline-end-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: #0a2c40;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+
+/* Caixa do conteúdo */
+.timeline-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  width: 45%;
+}
+
+.timeline-box:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 10px 20px #136e94;
+}
+
+/* Alternância esquerda / direita */
+.timeline-item:nth-child(odd) .timeline-box {
+  margin-left: 55%;
+}
+
+.timeline-item:nth-child(even) .timeline-box {
+  margin-right: 55%;
+  margin-left: 0;
+}
+
+/* Imagens */
+.timeline-box img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* ========================
+   RESPONSIVO
+======================== */
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 8px;
+    transform: none;
+  }
+
+  .timeline-marker {
+    left: 8px;
+    transform: none;
+  }
+
+  .timeline-box {
+    width: calc(100% - 40px);
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ========================
+   ANIMAÇÕES
+======================== */
+
+/* Elementos que devem sumir inicialmente */
+.fade-element {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Os CARDS descem */
+.timeline-box.fade-element {
+  transform: translateY(20px);
+}
+
+/* Os PONTOS NÃO descem — mantêm posição fixa */
+.timeline-marker.fade-element {
+  transform: none;
+}
+
+/* Quando aparece */
+.fade-element.show {
+  opacity: 1;
+  transform: translateY(0);
 }

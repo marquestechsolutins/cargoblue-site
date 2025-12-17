@@ -11,6 +11,8 @@
   <link rel="icon" href="favicon-16x16.png">
 </head>
 
+<!-- colcar data-aos na EQUIPE -->
+
 <body>
   <!-- NAVBAR -->
   <nav class="navbar navbar-edited navbar-expand-lg navbar-dark custom-navbar fixed-top">
@@ -450,6 +452,48 @@
       );
 
       fadeElements.forEach(el => observer.observe(el));
+    });
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter");
+      const speed = 250; // velocidade da animação (menor = mais rápido)
+
+      const animate = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
+
+        const update = () => {
+          const increment = target / speed;
+
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.floor(count).toLocaleString("pt-BR"); // <<< FORMATAÇÃO
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target.toLocaleString("pt-BR"); // valor final formatado
+          }
+        };
+
+        update();
+      };
+
+      // Observer para reiniciar a animação ao entrar na tela
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animate(entry.target);
+            } else {
+              entry.target.innerText = "0"; // reinicia quando sai de perto, igual Murici
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => observer.observe(counter));
     });
 
   </script>

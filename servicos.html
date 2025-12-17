@@ -112,41 +112,52 @@
   <section class="servicos py-4">
     <div class="container">
       
-      <hr class="my-5 opacity-50 hrcor">
+      <!-- <hr class="my-5 opacity-50 hrcor"> -->
       
-      <div class="row mb-5 justify-content-center text-center" data-aos="fade-up">
-        <div class="col-lg-8">
+      <div class="row" data-aos="fade-up">
+        <div class="col-lg-12">
           <h2 class="section-title">Nossa Frota</h2>
         </div>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-6" data-aos="fade-left">
-          <ul class="why-list">
-            <li><i class="bi bi-check2-circle"></i> A nossa frota conta com&nbsp;<span class="counter" data-target="40">0</span>&nbsp;Carretas</li>
-            <br>
-            <li><i class="bi bi-check2-circle"></i> Cerca de&nbsp;<span class="counter" data-target="38">0</span>&nbsp;cavalos</li>
-          </ul>
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <ul class="why-list">
-            <li><i class="bi bi-check2-circle"></i> Também temos&nbsp;<span class="counter" data-target="22">0</span>&nbsp;Trucks</li>
-            <br>
-            <li><i class="bi bi-check2-circle"></i> E mais de&nbsp;<span class="counter" data-target="8">0</span>&nbsp;Milhões de KM em 2025</li>
-          </ul>
-        </div>
-        <div class="col-md-6 text-center" >
-          <div data-aos="fade-right">
-            <img src="img/bg/caminhoes_patio3.png" alt="Carretas no patio" class="rounded-4 shadow-lg img-moov service-img">
-          </div>
-        </div>
-        <div class="col-md-6 text-center">
-          <div data-aos="fade-left">
-            <img src="img/bg/caminhoes_patio05.jpg.png" alt="Carretas no patio"  class="rounded-4 shadow-lg img-moov service-img">
+        <div class="row">
+          <div class="row g-4">
+            <div class="col-md-3" data-aos="fade-right">
+              <ul class="why-list">
+                <li><i class="bi bi-truck-front icon-lg"></i>&nbsp;<span class="counter" data-target="3">0</span>&nbsp;Caminhões 3/4.</li>
+                <li><i class="bi bi-truck icon-lg"></i>&nbsp;<span class="counter" data-target="40">0</span>&nbsp;Veículos do tipo Carreta.</li>
+                <li><i class="bi bi-truck-front-fill icon-lg"></i>&nbsp;<span class="counter" data-target="22">0</span>&nbsp;Caminhões Truck.</li>
+                <li><i class="bi bi-speedometer icon-lg"></i>&nbsp;<span class="counter" data-target="8">0</span>&nbsp;Do tipo Toco.</li>
+                <li><i class="bi bi-boxes icon-lg"></i>&nbsp;<span class="counter" data-target="111">0</span>&nbsp; veículos no total.</li>
+              </ul>
+              <button onclick="window.location.href='servicos.html'" class="btn-animado me-5" data-aos="fade-left">
+                Vamos conversar!
+              </button>
+            </div>
+            <div class="col-md-6 text-center" >
+              <div data-aos="fade-right">
+                <img src="img/bg/caminhao_mato.png" alt="Caminhao Estacionado" class="rounded-4 shadow-lg img-moov service-img">
+              </div>
+              <br>
+              <div data-aos="fade-up">
+                <img src="img/bg/caminhoes_patio_01.jpg" alt="Carretas no patio"  class="rounded-4 shadow-lg img-moov service-img">
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <div data-aos="fade-left">
+                <img src="img/bg/caminhao_azul_01.jpg" alt="Caminhao azul no patio"  class="rounded-4 shadow-lg img-moov service-img">
+              </div>
+
+              <br>
+              <div data-aos="fade-right">
+                <img src="img/bg/caminhoes02.jpg" alt="Carreta no amerela"  class="rounded-4 shadow-lg img-moov service-img">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
+      <br>
     </div>
   </section>
 
@@ -354,34 +365,45 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <script src="js/script.js"></script>
   <script>
+
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll(".counter");
-      const duration = 8000; // 5 segundos
+      const speed = 250; // velocidade da animação (menor = mais rápido)
 
-      counters.forEach(counter => {
-        const target = +counter.dataset.target;
-        let startTime = null;
+      const animate = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let count = 0;
 
-        function animate(timestamp) {
-          if (!startTime) startTime = timestamp;
+        const update = () => {
+          const increment = target / speed;
 
-          const elapsed = timestamp - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-
-          // Ease out (começa rápido, termina suave)
-          const easeOut = 1 - Math.pow(1 - progress, 3);
-
-          const current = Math.floor(target * easeOut);
-
-          counter.textContent = current.toLocaleString("pt-BR");
-
-          if (progress < 1) {
-            requestAnimationFrame(animate);
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.floor(count).toLocaleString("pt-BR"); // <<< FORMATAÇÃO
+            requestAnimationFrame(update);
+          } else {
+            counter.innerText = target.toLocaleString("pt-BR"); // valor final formatado
           }
-        }
+        };
 
-        requestAnimationFrame(animate);
-      });
+        update();
+      };
+
+      // Observer para reiniciar a animação ao entrar na tela
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animate(entry.target);
+            } else {
+              entry.target.innerText = "0"; // reinicia quando sai de perto, igual Murici
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => observer.observe(counter));
     });
 
     document.addEventListener("DOMContentLoaded", function () {

@@ -428,7 +428,7 @@ p {
    TRABALHE CONOSCO
    ========================================================= */
 .trabalhe {
-  background: #e5e5e5;
+  background: #E7EDF2;
 }
 
 .formulario {
@@ -662,6 +662,9 @@ p {
   color: #333;
 }
 
+.form-label {
+  color: #ffffff;
+}
 
 
 /* CARTÕES MISSÃO/VISÃO/VALORES */

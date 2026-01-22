@@ -51,7 +51,7 @@
     <div class="container text-center">
       <div class="row justify-content-center" data-aos="fade-left">
         <div class="col-lg-6">
-          <form class="card shadow p-4 rounded" action="#" method="POST">
+          <form class="card shadow p-4 rounded" action="#" method="POST" action="enviar-curriculo.php" enctype="multipart/form-data">
             <div class="mb-3 text-start">
               <label for="nome" class="form-label">Nome completo</label>
               <input type="text" id="nome" name="nome" class="form-control" placeholder="Seu nome" required>
@@ -67,10 +67,9 @@
               <select id="area" name="area" class="form-select" required>
                 <option value="">Selecione</option>
                 <option>Motorista</option>
-                <option>Logística</option>
+                <option>Manutenção</option>
                 <option>Administração</option>
-                <option>Financeiro</option>
-                <option>Outros</option>
+                <option>Operacional</option>
               </select>
             </div>
 
@@ -84,7 +83,7 @@
               <textarea id="mensagem" name="mensagem" rows="4" class="form-control" placeholder="Fale um pouco sobre você..."></textarea>
             </div>
             <div class="mb-3 text-center">
-              <button onclick="window.location.href='servicos.html'" class="btn-animado me-5" data-aos="fade-left">Enviar curriculo</button>
+              <button type="submit" class="btn-animado me-5" data-aos="fade-left">Enviar curriculo</button>
             </div>
           </form>
         </div>
@@ -125,7 +124,7 @@
         <div class="col-md-4 text-center text-md-end">
           <h5 class="mb-3 text-uppercase">Contato</h5>
           <p class="small mb-1">📍 Rua Ipê, 365 - Barueri, SP</p>
-          <p class="small mb-1">📞 (11) 99999-9999</p>
+          <p class="small mb-1">📞 (11) 91290-5777</p>
           <p class="small">📧 contato@cargoblue.com.br</p>
         </div>
 
@@ -135,13 +134,13 @@
 
       <div class="text-center small">
         <p class="mb-0">&copy; 2025 <strong>CargoBlue Logística e Transportes</strong>. Todos os direitos reservados.</p>
-        <p class="mt-1 text-secondary">Desenvolvido por TechMarques</p>
+        <p class="mt-1 text-secondary">Desenvolvido por <a href="https://marquestechsolutins.github.io/marquesTechSite/">Marques Tech</a></p>
       </div>
     </div>
   </footer>
 
   <!-- BOTÃO FLUTUANTE WHATSAPP -->
-  <a href="https://wa.me/5511999999999" 
+  <a href="https://wa.me/5511912905777" 
     class="btn-whatsapp" 
     target="_blank" 
     title="Fale conosco no WhatsApp">

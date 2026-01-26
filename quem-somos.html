@@ -141,7 +141,6 @@
             <img src="img/bg/monitoramento_cargoblue.png" alt="Monitoramento de cargas Cargoblue">
           </div>
         </div>
-        <div class="timeline-end-marker"></div>
       </div>
     </div>
   </section>
@@ -402,13 +401,28 @@
           }
         });
 
-        // Se ainda não chegou no último marker, trava nele
-        const lastMarker = markers[markers.length - 1];
+        // // Se ainda não chegou no último marker, trava nele
+        // const lastMarker = markers[markers.length - 1];
+        // const lastRect = lastMarker.getBoundingClientRect();
+        // const lastCenter = lastRect.top - wrapperTop + lastRect.height / 2;
 
-        if (lastReachedMarker && lastReachedMarker !== lastMarker) {
-          const r = lastReachedMarker.getBoundingClientRect();
-          height = r.top - wrapperTop + r.height / 2;
+        // // Se passou do último marker, trava nele
+        // if (height >= lastCenter) {
+        //   height = lastCenter;
+        // }
+
+        const lastMarker = markers[markers.length - 1];
+        const lastRect = lastMarker.getBoundingClientRect();
+        const lastCenter = lastRect.top - wrapperTop + lastRect.height / 2;
+
+        const OFFSET = -35; // ajuste fino
+
+        // Só limita quando o último marker entra na área visível
+        if (viewportCenter >= lastRect.top && height >= lastCenter + OFFSET) {
+          height = lastCenter + OFFSET;
         }
+
+
 
         // Limites
         height = Math.max(0, Math.min(height, wrapperHeight));
@@ -457,8 +471,6 @@
 
       fadeElements.forEach(el => observer.observe(el));
     });
-
-
 
     document.addEventListener("DOMContentLoaded", () => {
       const counters = document.querySelectorAll(".counter");

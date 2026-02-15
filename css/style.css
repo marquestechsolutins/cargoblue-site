@@ -39,7 +39,7 @@ p {
   border-radius: 10px;
   margin: 20px auto;
   width: 90%;
-  background: linear-gradient(180deg, #0A2C40, #0D1A24);
+  background: linear-gradient(100deg, #ffffff, #E7EDF2, #0A2C40, #0D1A24);
 }
 
 .navbar-brand {
@@ -105,12 +105,13 @@ p {
 =========================== */
 
 .hero-servicos {
-  height: 75vh;
-  background-image: url("../img/bg/caminhao_movimento_2.png");
+  height: 90vh;
+  background-image: url("../img/bg/caminhoes_patio_01.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   color: #E7EDF2;
+  object-fit: cover;
 }
 
 .hero-servicos .container {
@@ -171,16 +172,6 @@ p {
 }
 
 /* Imagem de fundo fixa com blur */
-.hero-right-bg {
-  position: absolute;
-  inset: 0;
-  background-image: url("../img/bg/img_8960.jpg"); /* ALTERE AQUI A IMAGEM FIXA */
-  background-size: cover;
-  background-position: center;
-  filter: blur(6px) brightness(0.7);
-  transform: scale(1.1);
-  z-index: 1;
-}
 
 .hero-content {
   position: relative;
@@ -511,7 +502,7 @@ p {
    FOOTER
    ========================================================= */
 .footer {
-  background: linear-gradient(180deg, #0A2C40, #0D1A24);
+  background: linear-gradient(180deg, #E7EDF2, #E7EDF2, #E7EDF2, #E7EDF2, #0A2C40, #0A2C40, #0D1A24);
   color: #0a2c40;
   position: relative;
   z-index: 10;
@@ -522,7 +513,7 @@ p {
 }
 
 .footer p{
-  color: #ffffff;
+  color: #0a2c40;
 }
 
 .footer hr {

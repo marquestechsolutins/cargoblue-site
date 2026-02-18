@@ -39,7 +39,7 @@ p {
   border-radius: 10px;
   margin: 20px auto;
   width: 90%;
-  background: linear-gradient(100deg, #ffffff, #E7EDF2, #0A2C40, #0D1A24);
+  background: linear-gradient(100deg, #ffffff, #E7EDF2, #136e94, #0a2c40);
 }
 
 .navbar-brand {
@@ -106,7 +106,7 @@ p {
 
 .hero-servicos {
   height: 90vh;
-  background-image: url("../img/bg/caminhoes_patio_01.jpg");
+  background-image: url("../img/bg/caminhoes_patio_07.jpeg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -502,7 +502,7 @@ p {
    FOOTER
    ========================================================= */
 .footer {
-  background: linear-gradient(180deg, #E7EDF2, #E7EDF2, #E7EDF2, #E7EDF2, #0A2C40, #0A2C40, #0D1A24);
+  background: linear-gradient(180deg, #E7EDF2, #E7EDF2, #E7EDF2, #E7EDF2, #136e94, #0a2c40, #0D1A24);
   color: #0a2c40;
   position: relative;
   z-index: 10;
